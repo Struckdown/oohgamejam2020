@@ -62,3 +62,7 @@ func _on_Plants_pressed():
 	$Content/MainShopUI.hide()
 	$Content/PelletShopUI.hide()
 	updateUI()
+
+
+func _on_Pellet_pressed(type):
+	mouseManagerRef.activePelletType = type

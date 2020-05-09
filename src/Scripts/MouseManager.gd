@@ -16,7 +16,6 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if not(event.pressed and event.button_index == 1):	# Return if not left click
 			return
-		#IF VALID POSITION #TODO
 		match mouseState:
 			mouseStates.SELLING:
 				pass	# Handled by fish being clicked

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Fish.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/StoreUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Art/background/background.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Autofeeder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Art/Decorations/castle.png" type="Texture" id=7]
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
@@ -27,5 +28,10 @@ position = Vector2( 33.8806, 9.24018 )
 
 [node name="CollisionShape2D" parent="Autofeeder" index="1"]
 position = Vector2( 401.593, 18.5708 )
+
+[node name="Castle" type="Sprite" parent="."]
+position = Vector2( 677.321, 500.199 )
+scale = Vector2( 1.19345, 1.22972 )
+texture = ExtResource( 7 )
 
 [editable path="Autofeeder"]

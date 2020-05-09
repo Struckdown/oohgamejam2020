@@ -437,3 +437,7 @@ __meta__ = {
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/SellButton" to="." method="_on_SellButton_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/AutofeederBtn" to="." method="_on_AutofeederBtn_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/FeedButton" to="." method="_on_FeedButton_pressed"]
+[connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet1" to="." method="_on_Pellet_pressed" binds= [ "pink" ]]
+[connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet2" to="." method="_on_Pellet_pressed" binds= [ "yellow" ]]
+[connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet3" to="." method="_on_Pellet_pressed" binds= [ "green" ]]
+[connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet4" to="." method="_on_Pellet_pressed" binds= [ "blue" ]]
