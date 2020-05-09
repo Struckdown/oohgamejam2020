@@ -1,11 +1,7 @@
 # Handles the logic of what the mouse does when clicking
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var currency = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
