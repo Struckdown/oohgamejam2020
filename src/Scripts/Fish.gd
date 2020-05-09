@@ -8,13 +8,18 @@ var chase_flag
 var chase_food
 var chase_direction
 var fishName
+var fishValue
 
 var rng = RandomNumberGenerator.new()
 var swim_location
 var timer = Timer.new() # Create a new Timer node
 
+var evolution_score
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	evolution_score = 0
+	fishValue = 10
 	rng.randomize ( )
 	timer.set_wait_time(0.1)
 	add_child(timer)# Add it to the node tree as the direct child
@@ -23,9 +28,11 @@ func _ready():
 		SPEED = 150
 	swim_direct_horizontal = 1
 	screen_size = get_viewport_rect().size
+	screen_size.x = 850
 	find_swim_location()
 	chase_flag = 0
 	$AnimatedSprite.play("swim")
+	$Name.text = getRandomName()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -69,7 +76,13 @@ func _on_Fish_area_entered(area):
 		
 func end_chase():
 	chase_flag = 0
-
+	evolution_score += 1
+	if evolution_score == 5:
+		print('evolve!')
+		$AnimatedSprite.play("swim_uni")
+		self.apply_scale(Vector2(1.5,1.5))
+		fishValue += 10
+		
 
 func _on_eat_area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:

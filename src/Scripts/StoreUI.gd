@@ -7,6 +7,7 @@ export(NodePath) var mouseManagerRef
 func _ready():
 	updateUI()
 	mouseManagerRef = get_node(mouseManagerRef)
+	GameManager.storeUI = self
 	get_parent().get_node("MouseManager")
 
 
