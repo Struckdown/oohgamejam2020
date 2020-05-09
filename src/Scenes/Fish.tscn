@@ -1,39 +1,74 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Art/Basic Fish/Fish.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Fish.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/eat_area.gd" type="Script" id=3]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": true,
-"name": "default",
+"name": "swim",
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=9]
 radius = 115.498
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=10]
 radius = 30.6025
 height = 3.58834
 
 [node name="Fish" type="Area2D"]
 script = ExtResource( 2 )
-SPEED = null
-CHASE_SPEED = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
+frames = SubResource( 8 )
+animation = "swim"
 
 [node name="detect_box" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 9 )
 
 [node name="eat_area" type="Area2D" parent="."]
 script = ExtResource( 3 )
 
 [node name="eat_box" type="CollisionShape2D" parent="eat_area"]
-shape = SubResource( 3 )
+shape = SubResource( 10 )
 [connection signal="area_entered" from="." to="." method="_on_Fish_area_entered"]
 [connection signal="area_entered" from="eat_area" to="eat_area" method="_on_eat_area_area_entered"]
+[connection signal="input_event" from="eat_area" to="." method="_on_eat_area_input_event"]

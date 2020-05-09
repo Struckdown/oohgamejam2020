@@ -8,16 +8,15 @@ var chase_flag
 var chase_food
 var chase_direction
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if SPEED == null:
+		SPEED = 200
 	swim_direct_horizontal = 1
 	screen_size = get_viewport_rect().size
 	chase_flag = 0
+	$AnimatedSprite.play("swim")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,9 +24,8 @@ func _process(delta):
 	if chase_flag == 0:
 		swim_passive(delta)
 	else:
-		chase_direction = (chase_food.position - position).normalized()
-		position.x -= chase_direction.y * delta * CHASE_SPEED
-		position.y += chase_direction.x * delta * CHASE_SPEED
+		chase_direction = (chase_food.global_position - position).normalized()
+		position += chase_direction * delta * CHASE_SPEED
 		position.x = clamp(position.x, 0, screen_size.x)
 		position.y = clamp(position.y, 0, screen_size.y)
 		
@@ -51,8 +49,17 @@ func swim_passive(delta):
 
 
 func _on_Fish_area_entered(area):
-	print(area.name)
 	if chase_flag == 0 and area.name == 'Pellet':
 		chase_food = area
 		chase_flag = 1
 		
+func end_chase():
+	chase_flag = 0
+
+
+func _on_eat_area_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		if not(event.pressed and event.button_index == 1):	# Return if not left click
+			return
+		print("Clicked fish")
+		GameManager.requestSellFish(self)
