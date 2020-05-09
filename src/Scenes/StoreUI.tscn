@@ -25,14 +25,12 @@ __meta__ = {
 }
 
 [node name="FeedButton" type="TextureButton" parent="Panel"]
-anchor_left = 0.277
-anchor_top = 0.05
-anchor_right = 0.694
-anchor_bottom = 0.158
-margin_left = 0.00131607
-margin_top = 0.116899
-margin_right = -0.0506821
-margin_bottom = -0.251106
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 43.2133
+margin_top = 29.9169
+margin_right = -48.7867
+margin_bottom = -502.083
 texture_normal = ExtResource( 1 )
 texture_pressed = SubResource( 1 )
 __meta__ = {
@@ -50,14 +48,12 @@ __meta__ = {
 }
 
 [node name="SellButton" type="TextureButton" parent="Panel"]
-anchor_left = 0.277
-anchor_top = 0.261
-anchor_right = 0.694
-anchor_bottom = 0.368
-margin_left = 0.00131607
-margin_top = -0.191559
-margin_right = -0.0506821
-margin_bottom = 0.0364227
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 43.2133
+margin_top = 155.364
+margin_right = -48.7867
+margin_bottom = -376.635
 texture_normal = ExtResource( 1 )
 texture_pressed = SubResource( 1 )
 __meta__ = {
@@ -69,6 +65,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 70.0
 text = "Sell"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyFish" type="TextureButton" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 43.2133
+margin_top = 265.966
+margin_right = -47.7867
+margin_bottom = -266.034
+texture_normal = ExtResource( 1 )
+texture_pressed = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyFishLabel" type="Label" parent="Panel/BuyFish"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 70.0
+text = "Fish"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -86,3 +105,4 @@ __meta__ = {
 }
 [connection signal="pressed" from="Panel/FeedButton" to="." method="_on_FeedButton_pressed"]
 [connection signal="pressed" from="Panel/SellButton" to="." method="_on_SellButton_pressed"]
+[connection signal="pressed" from="Panel/BuyFish" to="." method="_on_BuyFish_pressed"]

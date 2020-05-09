@@ -37,7 +37,6 @@ func checkIfCanAffordPellet(cost):
 
 func spawnPellet(location):
 	GameManager.currency -= 1
-	print("You now have " + str(GameManager.currency) + "money left")
 	var scene = load("res://Scenes/Pellet.tscn")
 	var pellet = scene.instance()
 	get_parent().add_child(pellet)

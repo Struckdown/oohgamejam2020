@@ -24,3 +24,7 @@ func _on_FeedButton_pressed():
 
 func _on_SellButton_pressed():
 	mouseManagerRef.setMouseState("sell")
+
+
+func _on_BuyFish_pressed():
+	GameManager.spawnFish()

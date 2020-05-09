@@ -2,7 +2,9 @@
 extends Node
 
 var currency = 10
-var fishArray = []
+var fishArray = []	# TODO replace with Fish scene as manager?
+var rng = RandomNumberGenerator.new()
+var MAX_SCREEN_WIDTH = 600
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,3 +19,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func spawnFish():
+	var scene = load("res://Scenes/Fish.tscn")
+	var fish = scene.instance()
+	var root = get_tree().get_root()
+	var current_scene = root.get_child(root.get_child_count() - 1)
+	current_scene.add_child(fish)
+	rng.randomize()
+	var xpos = rng.randf_range(0, MAX_SCREEN_WIDTH)
+	var ypos = rng.randf_range(-50, 50)
+	print(xpos, str(ypos))
+	fish.position = Vector2(xpos, ypos)
