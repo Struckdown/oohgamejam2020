@@ -13,7 +13,8 @@ var fishType
 var swimType
 var maxSize
 
-var foodDict = {"PINK": 0, "YELLOW": 0, "GREEN": 0, "BLUE": 0}
+var foodDict = {"pink": 0, "yellow": 0, "green": 0, "blue": 0}
+var pelletTypeDict = {0:'pink',1:"green",2:"yellow",3:"blue"}
 
 var rng = RandomNumberGenerator.new()
 var swim_location
@@ -82,7 +83,8 @@ func _on_Fish_area_entered(area):
 		chase_flag = 1
 		
 func end_chase(food):
-	#foodDict[food.pelletType] += 1
+	#print(pelletTypeDict[food.get_owner().pelletType])
+	foodDict[pelletTypeDict[food.get_owner().pelletType]] += 1
 	chase_flag = 0
 	$EatSFX.play(0)
 	evolution_score += 1
@@ -122,7 +124,7 @@ func evolve():
 		evolve_fx()
 		$AnimatedSprite.play(swimType)
 		evolution_score = 0
-		foodDict = {"PINK": 0, "YELLOW": 0, "GREEN": 0, "BLUE": 0}
+		foodDict = {"pink": 0, "yellow": 0, "green": 0, "blue": 0}
 
 func evolve_fx():
 	var growSFX = load("res://Audio/fishygrows.wav")
@@ -131,7 +133,7 @@ func evolve_fx():
 	self.apply_scale(Vector2(1.5,1.5))
 
 func evolve_type_check():
-	if foodDict["GREEN"] == 5:
+	if foodDict["green"] == 5:
 		if fishType == "BASE":
 			fishType = "SKELETON"
 			swimType = "swim_skel"
@@ -140,7 +142,7 @@ func evolve_type_check():
 			fishType = "SHADOW"
 			swimType = "swim_shad"
 			fishValue += 60
-	elif foodDict['YELLOW'] == 5:
+	elif foodDict['yellow'] == 5:
 		if fishType == "BASE":
 			fishType = "GOLD"
 			swimType = "swim_gold"
@@ -158,7 +160,7 @@ func evolve_type_check():
 			fishType = "UBER"
 			swimType = "swim_uber"
 			fishValue += 150
-	elif foodDict['BLUE'] == 5:
+	elif foodDict['blue'] == 5:
 		if fishType == "BIG_BASE":
 			fishType = "DIAMOND"
 			swimType = "swim_diam"
