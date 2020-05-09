@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Fish.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/MouseManager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/StoreUI.tscn" type="PackedScene" id=3]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node"]
 
 [node name="Fish" parent="." instance=ExtResource( 1 )]
 position = Vector2( 93.0782, 300.714 )
@@ -12,3 +13,9 @@ position = Vector2( 93.0782, 300.714 )
 visible = false
 
 [node name="Viewport" type="Viewport" parent="."]
+
+[node name="StoreUI" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.458
+anchor_bottom = 0.325
+margin_right = 555.008
+margin_bottom = 405.0

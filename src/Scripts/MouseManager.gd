@@ -21,6 +21,7 @@ func _input(event):
 					spawnPellet(event.position)
 			_:
 				print("Invalid mouse state")
+		updateUI()
 
    #elif event is InputEventMouseMotion:
 	#   print("Mouse Motion at: ", event.position)
@@ -38,3 +39,7 @@ func spawnPellet(location):
 	var pellet = scene.instance()
 	get_parent().add_child(pellet)
 	pellet.position = location
+
+
+func updateUI():
+	get_parent().find_node("StoreUI").updateUI()
