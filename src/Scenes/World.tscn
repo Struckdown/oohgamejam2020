@@ -15,7 +15,4 @@ visible = false
 [node name="Viewport" type="Viewport" parent="."]
 
 [node name="StoreUI" parent="." instance=ExtResource( 3 )]
-anchor_right = 0.458
-anchor_bottom = 0.325
-margin_right = 555.008
-margin_bottom = 405.0
+mouseManagerRef = NodePath("../MouseManager")
