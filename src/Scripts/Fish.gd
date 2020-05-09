@@ -13,8 +13,11 @@ var rng = RandomNumberGenerator.new()
 var swim_location
 var timer = Timer.new() # Create a new Timer node
 
+var evolution_score
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	evolution_score = 0
 	rng.randomize ( )
 	timer.set_wait_time(0.1)
 	add_child(timer)# Add it to the node tree as the direct child
@@ -71,7 +74,12 @@ func _on_Fish_area_entered(area):
 		
 func end_chase():
 	chase_flag = 0
-
+	evolution_score += 1
+	if evolution_score == 5:
+		print('evolve!')
+		$AnimatedSprite.play("swim_uni")
+		self.apply_scale(Vector2(1.5,1.5))
+		
 
 func _on_eat_area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
