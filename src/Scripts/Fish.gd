@@ -23,6 +23,7 @@ func _ready():
 		SPEED = 150
 	swim_direct_horizontal = 1
 	screen_size = get_viewport_rect().size
+	screen_size.x = 850
 	find_swim_location()
 	chase_flag = 0
 	$AnimatedSprite.play("swim")
