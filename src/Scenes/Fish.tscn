@@ -71,3 +71,4 @@ script = ExtResource( 3 )
 shape = SubResource( 10 )
 [connection signal="area_entered" from="." to="." method="_on_Fish_area_entered"]
 [connection signal="area_entered" from="eat_area" to="eat_area" method="_on_eat_area_area_entered"]
+[connection signal="input_event" from="eat_area" to="." method="_on_eat_area_input_event"]

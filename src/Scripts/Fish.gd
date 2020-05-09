@@ -55,3 +55,11 @@ func _on_Fish_area_entered(area):
 		
 func end_chase():
 	chase_flag = 0
+
+
+func _on_eat_area_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		if not(event.pressed and event.button_index == 1):	# Return if not left click
+			return
+		print("Clicked fish")
+		GameManager.requestSellFish(self)

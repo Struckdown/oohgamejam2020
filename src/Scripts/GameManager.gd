@@ -6,6 +6,7 @@ var fishArray = []	# TODO replace with Fish scene as manager?
 var rng = RandomNumberGenerator.new()
 var MAX_SCREEN_WIDTH = 600
 var mouseManager = null
+var storeUI
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +18,7 @@ func _ready():
 			fishArray.append(child) 
 	var world = get_tree().get_root().find_node("World", true, false)
 	mouseManager = world.find_node("MouseManager")
+	storeUI = world.find_node("StoreUI")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,6 +39,13 @@ func spawnFish():
 	fishArray.append(fish)
 
 
+func requestSellFish(fish):
+	mouseManager.requestSell(fish)
+
 func sellFish(fish):
 	currency += 10 # TODO replace with fish worth
 	fish.queue_free()
+	updateUI()
+
+func updateUI():
+	storeUI.updateUI()

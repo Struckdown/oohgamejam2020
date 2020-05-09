@@ -7,14 +7,16 @@ var mouseState = mouseStates.SELLING
 func _ready():
 	mouseState = mouseStates.FEED
 
-func _input(event):
+func _unhandled_input(event):
 	# Mouse in viewport coordinates
+	
 	if event is InputEventMouseButton:
 		if not(event.pressed and event.button_index == 1):	# Return if not left click
 			return
 		#IF VALID POSITION #TODO
 		match mouseState:
 			mouseStates.SELLING:
+				pass
 				var fish = getOverlappingFish(event.position)
 				if fish != null:
 					GameManager.sell(fish)
@@ -23,7 +25,7 @@ func _input(event):
 					spawnPellet(event.position)
 			_:
 				print("Invalid mouse state")
-		updateUI()
+		GameManager.updateUI()
 
    #elif event is InputEventMouseMotion:
 	#   print("Mouse Motion at: ", event.position)
@@ -52,9 +54,6 @@ func spawnPellet(location):
 	get_parent().add_child(pellet)
 	pellet.position = location
 
-
-func updateUI():
-	get_parent().find_node("StoreUI").updateUI()
 	
 func setMouseState(state):
 	match state:
