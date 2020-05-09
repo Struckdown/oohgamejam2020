@@ -12,6 +12,7 @@ var fishValue
 var fishType
 var swimType
 var maxSize
+var hungry
 
 var foodDict = {"pink": 0, "yellow": 0, "green": 0, "blue": 0}
 var pelletTypeDict = {0:'pink',1:"green",2:"yellow",3:"blue"}
@@ -19,12 +20,14 @@ var pelletTypeDict = {0:'pink',1:"green",2:"yellow",3:"blue"}
 var rng = RandomNumberGenerator.new()
 var swim_location
 var timer = Timer.new() # Create a new Timer node
+var eatTimer = Timer.new()
 
 var evolution_score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	evolution_score = 0
+	hungry = true
 	fishValue = 10
 	fishType = "BASE"
 	swimType = "swim"
@@ -32,6 +35,9 @@ func _ready():
 	timer.set_wait_time(0.1)
 	add_child(timer)# Add it to the node tree as the direct child
 	timer.start()
+	eatTimer.set_wait_time(2)
+	add_child(eatTimer)# Add it to the node tree as the direct child
+	eatTimer.start()
 	if SPEED == null:
 		SPEED = 150
 	swim_direct_horizontal = 1
@@ -55,7 +61,9 @@ func _process(delta):
 		position += chase_direction * delta * CHASE_SPEED
 		position.x = clamp(position.x, 0, screen_size.x)
 		position.y = clamp(position.y, 0, screen_size.y)
-		
+	if !hungry:
+		yield(eatTimer, "timeout")
+		hungry = true
 	
 	
 	
@@ -78,12 +86,13 @@ func swim_passive(delta):
 
 
 func _on_Fish_area_entered(area):
-	if chase_flag == 0 and area.name == 'Pellet':
+	if chase_flag == 0 and area.name == 'Pellet' and hungry:
 		chase_food = area
 		chase_flag = 1
+		hungry = false
+		
 		
 func end_chase(food):
-	#print(pelletTypeDict[food.get_owner().pelletType])
 	foodDict[pelletTypeDict[food.get_owner().pelletType]] += 1
 	chase_flag = 0
 	$EatSFX.play(0)
