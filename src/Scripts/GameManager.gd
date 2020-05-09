@@ -24,6 +24,9 @@ func _ready():
 #	pass
 
 func spawnFish():
+	if currency < 10:
+		return
+	currency -= 10
 	var scene = load("res://Scenes/Fish.tscn")
 	var fish = scene.instance()
 	var root = get_tree().get_root()
@@ -32,9 +35,9 @@ func spawnFish():
 	rng.randomize()
 	var xpos = rng.randf_range(0, MAX_SCREEN_WIDTH)
 	var ypos = rng.randf_range(-50, 50)
-	print(xpos, str(ypos))
 	fish.position = Vector2(xpos, ypos)
 	fishArray.append(fish)
+	updateUI()
 
 
 func requestSellFish(fish):

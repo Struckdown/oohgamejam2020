@@ -3,6 +3,8 @@ extends Node
 
 enum mouseStates {SELLING, FEED}
 var mouseState = mouseStates.SELLING
+var activePelletType = "pink"
+
 
 func _ready():
 	mouseState = mouseStates.FEED
@@ -44,13 +46,25 @@ func checkIfCanAffordPellet(cost):
 	return cost <= GameManager.currency
 
 func spawnPellet(location):
-	GameManager.currency -= 1
-	var scene = load("res://Scenes/Pellet.tscn")
-	var pellet = scene.instance()
-	get_parent().add_child(pellet)
-	pellet.position = location
+	if GameManager.currency >= getPelletCost(activePelletType):
+		GameManager.currency -= getPelletCost(activePelletType)
+		var scene = load("res://Scenes/Pellet.tscn")
+		var pellet = scene.instance()
+		get_parent().add_child(pellet)
+		pellet.position = location
+		pellet.setPelletType(activePelletType)
 
-	
+func getPelletCost(pelletType):
+	match pelletType:
+		"pink":
+			return 0
+		"yellow":
+			return 1
+		"green":
+			return 3
+		"blue":
+			return 10
+
 func setMouseState(state):
 	match state:
 		"sell":
