@@ -13,7 +13,7 @@ script = ExtResource( 2 )
 scale = Vector2( 0.375, 0.115 )
 texture = ExtResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Pellet" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pellet"]
 shape = SubResource( 1 )
