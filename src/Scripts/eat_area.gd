@@ -17,4 +17,7 @@ func _ready():
 
 
 func _on_eat_area_area_entered(area):
-	print('Yum')
+	if area.name == 'Pellet':
+		get_owner().end_chase()
+		print('Yum')
+		area.queue_free()

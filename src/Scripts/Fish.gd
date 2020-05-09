@@ -23,9 +23,8 @@ func _process(delta):
 	if chase_flag == 0:
 		swim_passive(delta)
 	else:
-		chase_direction = (chase_food.position - position).normalized()
-		position.x -= chase_direction.y * delta * CHASE_SPEED
-		position.y += chase_direction.x * delta * CHASE_SPEED
+		chase_direction = (chase_food.global_position - position).normalized()
+		position += chase_direction * delta * CHASE_SPEED
 		position.x = clamp(position.x, 0, screen_size.x)
 		position.y = clamp(position.y, 0, screen_size.y)
 		
@@ -49,8 +48,9 @@ func swim_passive(delta):
 
 
 func _on_Fish_area_entered(area):
-	print(area.name)
 	if chase_flag == 0 and area.name == 'Pellet':
 		chase_food = area
 		chase_flag = 1
 		
+func end_chase():
+	chase_flag = 0
