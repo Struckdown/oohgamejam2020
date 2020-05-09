@@ -41,7 +41,7 @@ func requestSellFish(fish):
 	mouseManager.requestSell(fish)
 
 func sellFish(fish):
-	currency += 10 # TODO replace with fish worth
+	currency += fish.fishValue
 	fish.queue_free()
 	updateUI()
 
