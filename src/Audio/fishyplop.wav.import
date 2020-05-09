@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fishyplop.wav-4dbc8ec90f65cf5240b5577998dd2c23.sample"
+
+[deps]
+
+source_file="res://Audio/fishyplop.wav"
+dest_files=[ "res://.import/fishyplop.wav-4dbc8ec90f65cf5240b5577998dd2c23.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

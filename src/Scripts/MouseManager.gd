@@ -16,10 +16,7 @@ func _unhandled_input(event):
 		#IF VALID POSITION #TODO
 		match mouseState:
 			mouseStates.SELLING:
-				pass
-				var fish = getOverlappingFish(event.position)
-				if fish != null:
-					GameManager.sell(fish)
+				pass	# Handled by fish being clicked
 			mouseStates.FEED:
 				if checkIfCanAffordPellet(1):
 					spawnPellet(event.position)
@@ -37,12 +34,10 @@ func _unhandled_input(event):
 func requestSell(fish):
 	if mouseState == mouseStates.SELLING:
 		GameManager.sellFish(fish)
+		var soldSFX = load("res://Audio/fishsold.wav")
+		$AudioStreamPlayer.stream = soldSFX
+		$AudioStreamPlayer.play()
 		
-
-func getOverlappingFish(location):
-	var overlappedFish = []
-	for fish in GameManager.fishArray:
-		pass #if fish.eat_area.eat_box
 
 func checkIfCanAffordPellet(cost):
 	return cost <= GameManager.currency

@@ -1,20 +1,29 @@
 extends Area2D
 
-export var SPEED = 200
-export var CHASE_SPEED = 400
+export var SPEED = 150
+export var CHASE_SPEED = 300
 var screen_size
 var swim_direct_horizontal
 var chase_flag
 var chase_food
 var chase_direction
+var fishName
 
+var rng = RandomNumberGenerator.new()
+var swim_location
+var timer = Timer.new() # Create a new Timer node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rng.randomize ( )
+	timer.set_wait_time(0.1)
+	add_child(timer)# Add it to the node tree as the direct child
+	timer.start()
 	if SPEED == null:
-		SPEED = 200
+		SPEED = 150
 	swim_direct_horizontal = 1
 	screen_size = get_viewport_rect().size
+	find_swim_location()
 	chase_flag = 0
 	$AnimatedSprite.play("swim")
 
@@ -38,16 +47,17 @@ func _process(delta):
 
 func swim_passive(delta):
 	var velocity = Vector2()  # The player's movement vector.
-	velocity.x += swim_direct_horizontal
-	if velocity.length() > 0:
+	velocity += (swim_location - position)
+	if velocity.x < 2 and velocity.y < 2:
+		yield(timer, "timeout")
+		find_swim_location()
+	elif velocity.length() > 0:
 		velocity = velocity.normalized() * SPEED
 		
-	$AnimatedSprite.flip_h = velocity.x > 0
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
-	if position.x == 0 or position.x == screen_size.x:
-		swim_direct_horizontal = swim_direct_horizontal * -1
+		$AnimatedSprite.flip_h = velocity.x > 0
+		position += velocity * delta
+		position.x = clamp(position.x, 0, screen_size.x)
+		position.y = clamp(position.y, 0, screen_size.y)
 		
 		
 
@@ -67,3 +77,20 @@ func _on_eat_area_input_event(viewport, event, shape_idx):
 			return
 		print("Clicked fish")
 		GameManager.requestSellFish(self)
+
+func getRandomName():
+	var file = File.new()
+	file.open("res://fishNameList.txt", File.READ)
+	var words = get_lines(file)
+	file.close()
+	var newName = words[randi() % words.size()]
+	return newName
+
+static func get_lines(file):
+	var lines = []
+	while not file.eof_reached():
+		lines.append(file.get_line())
+	return lines
+
+func find_swim_location():
+	swim_location = Vector2(rng.randi_range(0,screen_size.x),rng.randi_range(0,screen_size.y))

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fishsold.wav-39d0b428c69915bb45a2ce931baee62f.sample"
+
+[deps]
+
+source_file="res://Audio/fishsold.wav"
+dest_files=[ "res://.import/fishsold.wav-39d0b428c69915bb45a2ce931baee62f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

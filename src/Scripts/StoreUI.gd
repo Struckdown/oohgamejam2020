@@ -15,16 +15,19 @@ func _ready():
 #	pass
 
 func updateUI():
-	$Panel/Currency.text = "Money: " + str(GameManager.currency)
+	$Panel/Currency.text = str(GameManager.currency)
 
 
 func _on_FeedButton_pressed():
 	mouseManagerRef.setMouseState("feed")
+	$AudioStreamPlayer.play()
 
 
 func _on_SellButton_pressed():
 	mouseManagerRef.setMouseState("sell")
+	$AudioStreamPlayer.play()
 
 
 func _on_BuyFish_pressed():
 	GameManager.spawnFish()
+	$AudioStreamPlayer.play()
