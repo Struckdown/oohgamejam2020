@@ -7,6 +7,7 @@ var rng = RandomNumberGenerator.new()
 var MAX_SCREEN_WIDTH = 600
 var mouseManager = null
 var storeUI
+var autofeeder
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
