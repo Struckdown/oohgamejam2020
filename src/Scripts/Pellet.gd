@@ -1,7 +1,7 @@
 extends Node2D
 
 var FALL_SPEED = 1
-enum pelletTypeOptions {PINK, YELLOW, GRAY}
+enum pelletTypeOptions {PINK, GREEN, YELLOW, BLUE}
 var pelletType
 
 # Called when the node enters the scene tree for the first time.
