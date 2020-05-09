@@ -34,7 +34,7 @@ func _on_SellButton_pressed():
 
 func _on_BuyFish_pressed():
 	GameManager.spawnFish()
-	$AudioStreamPlayer.play()
+	$BuyFishSFX.play(0)
 
 
 func _on_AutofeederBtn_pressed():

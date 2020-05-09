@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Art/Basic Fish/Fish.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Fish.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/eat_area.gd" type="Script" id=3]
 [ext_resource path="res://Audio/fishyplop.wav" type="AudioStream" id=4]
 [ext_resource path="res://Art/Unifish/Unifish.png" type="Texture" id=5]
+[ext_resource path="res://Audio/munchin.wav" type="AudioStream" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -130,6 +131,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="EatSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 [connection signal="area_entered" from="." to="." method="_on_Fish_area_entered"]
 [connection signal="area_entered" from="eat_area" to="eat_area" method="_on_eat_area_area_entered"]
 [connection signal="input_event" from="eat_area" to="." method="_on_eat_area_input_event"]

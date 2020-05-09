@@ -76,9 +76,13 @@ func _on_Fish_area_entered(area):
 		
 func end_chase():
 	chase_flag = 0
+	$EatSFX.play(0)
 	evolution_score += 1
 	if evolution_score == 5:
 		print('evolve!')
+		var growSFX = load("res://Audio/fishygrows.wav")
+		$AudioStreamPlayer2D.stream = growSFX
+		$AudioStreamPlayer2D.play(0)
 		$AnimatedSprite.play("swim_uni")
 		self.apply_scale(Vector2(1.5,1.5))
 		fishValue += 10
