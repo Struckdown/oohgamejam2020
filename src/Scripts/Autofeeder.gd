@@ -2,7 +2,7 @@ extends Area2D
 
 
 var autofeederLevel = 0
-var maxDelay = 10
+var maxDelay = 5
 var delay = maxDelay
 
 # Called when the node enters the scene tree for the first time.
