@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Art/HUD Elements/shop button.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/StoreUI.gd" type="Script" id=2]
+[ext_resource path="res://Art/Decorations/stubby plant.png" type="Texture" id=3]
 [ext_resource path="res://Art/HUD Elements/Sell Fish.png" type="Texture" id=4]
 [ext_resource path="res://Art/HUD Elements/More Fish.png" type="Texture" id=5]
 [ext_resource path="res://Audio/button.wav" type="AudioStream" id=6]
@@ -134,6 +135,7 @@ __meta__ = {
 }
 
 [node name="MainShopUI" type="Control" parent="Content"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -406,6 +408,157 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="DecorationShopUI" type="Control" parent="Content"]
+anchor_right = 3.464
+anchor_bottom = 4.563
+margin_left = 4.0
+margin_right = 15.44
+margin_bottom = 222.48
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/DecorationShopUI"]
+anchor_right = 1.0
+anchor_bottom = 1.022
+margin_right = 42.0
+margin_bottom = 0.0899658
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DelayDecor" type="TextureButton" parent="Content/DecorationShopUI/VBoxContainer"]
+margin_right = 192.0
+margin_bottom = 100.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+texture_pressed = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lbl" type="Label" parent="Content/DecorationShopUI/VBoxContainer/DelayDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 73.8689
+margin_bottom = -14.1311
+text = "Passive Income (delay)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="Content/DecorationShopUI/VBoxContainer/DelayDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 89.0095
+margin_bottom = 5.00946
+text = "$50"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BulkDecor" type="TextureButton" parent="Content/DecorationShopUI/VBoxContainer"]
+margin_top = 104.0
+margin_right = 192.0
+margin_bottom = 204.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+texture_pressed = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lbl" type="Label" parent="Content/DecorationShopUI/VBoxContainer/BulkDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 73.8689
+margin_bottom = -14.1311
+text = "Passive Income
+(amount)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="Content/DecorationShopUI/VBoxContainer/BulkDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 103.711
+margin_bottom = 19.7113
+text = "$50"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MultiplierDecor" type="TextureButton" parent="Content/DecorationShopUI/VBoxContainer"]
+margin_top = 208.0
+margin_right = 192.0
+margin_bottom = 308.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+texture_pressed = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lbl" type="Label" parent="Content/DecorationShopUI/VBoxContainer/MultiplierDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 73.8689
+margin_bottom = -14.1311
+text = "Selling Multiplier"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="Content/DecorationShopUI/VBoxContainer/MultiplierDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 89.0095
+margin_bottom = 5.00946
+text = "$50"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinDecor" type="TextureButton" parent="Content/DecorationShopUI/VBoxContainer"]
+margin_top = 312.0
+margin_right = 192.0
+margin_bottom = 414.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+texture_pressed = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plant4Lbl" type="Label" parent="Content/DecorationShopUI/VBoxContainer/WinDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 73.8689
+margin_bottom = -14.1311
+text = "Win the Game"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plant4CostLbl" type="Label" parent="Content/DecorationShopUI/VBoxContainer/WinDecor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 89.0095
+margin_bottom = 5.00946
+text = "$10000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Tabs/HBoxContainer/Plants" to="." method="_on_Plants_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/Pellets" to="." method="_on_Pellets_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/Main" to="." method="_on_Main_pressed"]
@@ -416,3 +569,7 @@ __meta__ = {
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet2" to="." method="_on_Pellet_pressed" binds= [ "yellow" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet3" to="." method="_on_Pellet_pressed" binds= [ "green" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet4" to="." method="_on_Pellet_pressed" binds= [ "blue" ]]
+[connection signal="pressed" from="Content/DecorationShopUI/VBoxContainer/DelayDecor" to="." method="_on_Plant_pressed" binds= [ "delay" ]]
+[connection signal="pressed" from="Content/DecorationShopUI/VBoxContainer/BulkDecor" to="." method="_on_Plant_pressed" binds= [ "bulk" ]]
+[connection signal="pressed" from="Content/DecorationShopUI/VBoxContainer/MultiplierDecor" to="." method="_on_Plant_pressed" binds= [ "multiplier" ]]
+[connection signal="pressed" from="Content/DecorationShopUI/VBoxContainer/WinDecor" to="." method="_on_Plant4_pressed"]

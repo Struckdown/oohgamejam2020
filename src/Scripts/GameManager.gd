@@ -6,6 +6,7 @@ var fishArray = []	# TODO replace with Fish scene as manager?
 var rng = RandomNumberGenerator.new()
 var MAX_SCREEN_WIDTH = 600
 var mouseManager = null
+var decorationManager = null
 var storeUI
 var autofeeder
 
@@ -46,7 +47,7 @@ func requestSellFish(fish):
 	mouseManager.requestSell(fish)
 
 func sellFish(fish):
-	currency += fish.fishValue
+	currency += (fish.fishValue * decorationManager.incomeMultiplier)
 	fish.queue_free()
 	updateUI()
 
