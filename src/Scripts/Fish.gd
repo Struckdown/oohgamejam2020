@@ -72,13 +72,17 @@ func _on_eat_area_input_event(viewport, event, shape_idx):
 		GameManager.requestSellFish(self)
 
 func getRandomName():
-	print("Hi")
 	var file = File.new()
 	file.open("res://fishNameList.txt", File.READ)
-	var lines = []
-	#while not file.eof_reached():
-	#	lines.append(file.get_line())
+	var words = get_lines(file)
+	#var words = text.split(" ")
 	file.close()
-	#var newName = lines[randi() % lines.size()]
-	return "James"
-	#return newName
+	print(words)
+	var newName = words[randi() % words.size()]
+	return newName
+
+static func get_lines(file):
+	var lines = []
+	while not file.eof_reached():
+		lines.append(file.get_line())
+	return lines
