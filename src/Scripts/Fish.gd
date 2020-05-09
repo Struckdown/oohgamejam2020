@@ -1,7 +1,7 @@
 extends Area2D
 
 export var SPEED = 200
-export var CHASE_SPEED = 600
+export var CHASE_SPEED = 400
 var screen_size
 var swim_direct_horizontal
 var chase_flag
@@ -23,8 +23,11 @@ func _ready():
 func _process(delta):
 	if chase_flag == 0:
 		swim_passive(delta)
+	elif !weakref(chase_food).get_ref():
+		chase_flag = 0
 	else:
 		chase_direction = (chase_food.global_position - position).normalized()
+		$AnimatedSprite.flip_h = chase_direction.x > 0
 		position += chase_direction * delta * CHASE_SPEED
 		position.x = clamp(position.x, 0, screen_size.x)
 		position.y = clamp(position.y, 0, screen_size.y)
@@ -39,6 +42,7 @@ func swim_passive(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * SPEED
 		
+	$AnimatedSprite.flip_h = velocity.x > 0
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
