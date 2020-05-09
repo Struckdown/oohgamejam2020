@@ -1,10 +1,6 @@
 extends Area2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,6 +14,6 @@ func _ready():
 
 func _on_eat_area_area_entered(area):
 	if area.name == 'Pellet':
-		get_owner().end_chase()
+		get_owner().end_chase(area)
 		print('Yum')
 		area.get_owner().queue_free()

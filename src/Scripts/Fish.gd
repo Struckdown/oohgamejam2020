@@ -9,6 +9,9 @@ var chase_food
 var chase_direction
 var fishName
 var fishValue
+var fishType
+
+var foodDict = {"PINK": 5, "YELLOW": 0, "GREEN": 0, "BLUE": 0}
 
 var rng = RandomNumberGenerator.new()
 var swim_location
@@ -20,6 +23,7 @@ var evolution_score
 func _ready():
 	evolution_score = 0
 	fishValue = 10
+	fishType = "BASE"
 	rng.randomize ( )
 	timer.set_wait_time(0.1)
 	add_child(timer)# Add it to the node tree as the direct child
@@ -74,18 +78,14 @@ func _on_Fish_area_entered(area):
 		chase_food = area
 		chase_flag = 1
 		
-func end_chase():
+func end_chase(food):
+	#foodDict[food.pelletType] += 1
 	chase_flag = 0
 	$EatSFX.play(0)
 	evolution_score += 1
 	if evolution_score == 5:
-		print('evolve!')
-		var growSFX = load("res://Audio/fishygrows.wav")
-		$AudioStreamPlayer2D.stream = growSFX
-		$AudioStreamPlayer2D.play(0)
-		$AnimatedSprite.play("swim_uni")
-		self.apply_scale(Vector2(1.5,1.5))
-		fishValue += 10
+		evolve()
+		
 		
 
 func _on_eat_area_input_event(viewport, event, shape_idx):
@@ -111,3 +111,32 @@ static func get_lines(file):
 
 func find_swim_location():
 	swim_location = Vector2(rng.randi_range(0,screen_size.x),rng.randi_range(0,screen_size.y))
+
+func evolve():
+	if foodDict["PINK"] == 5 and fishType == "BASE":
+		print('evolve!')
+		var growSFX = load("res://Audio/fishygrows.wav")
+		$AudioStreamPlayer2D.stream = growSFX
+		$AudioStreamPlayer2D.play(0)
+		$AnimatedSprite.play("swim_uni")
+		self.apply_scale(Vector2(1.5,1.5))
+		fishValue += 20
+		fishType = "UNICORN"
+		evolution_score = 0
+	elif foodDict["PINK"] == 5 and fishType == "UNICORN":
+		print('evolve!')
+		var growSFX = load("res://Audio/fishygrows.wav")
+		$AudioStreamPlayer2D.stream = growSFX
+		$AudioStreamPlayer2D.play(0)
+		$AnimatedSprite.play("swim_uber")
+		self.apply_scale(Vector2(1.5,1.5))
+		fishValue += 20
+		evolution_score = 0
+	else:
+		print('evolve!')
+		var growSFX = load("res://Audio/fishygrows.wav")
+		$AudioStreamPlayer2D.stream = growSFX
+		$AudioStreamPlayer2D.play(0)
+		self.apply_scale(Vector2(1.5,1.5))
+		fishValue += 10
+		evolution_score = 0
