@@ -15,7 +15,9 @@ func _input(event):
 		#IF VALID POSITION #TODO
 		match mouseState:
 			mouseStates.SELLING:
-				pass
+				var fish = getOverlappingFish(event.position)
+				if fish != null:
+					GameManager.sell(fish)
 			mouseStates.FEED:
 				if checkIfCanAffordPellet(1):
 					spawnPellet(event.position)
@@ -29,8 +31,16 @@ func _input(event):
    # Print the size of the viewport
    #print("Viewport Resolution is: ", get_viewport_rect().size)
 
+
+func requestSell(fish):
+	if mouseState == mouseStates.SELLING:
+		GameManager.sellFish(fish)
+		
+
 func getOverlappingFish(location):
-	return 0
+	var overlappedFish = []
+	for fish in GameManager.fishArray:
+		pass #if fish.eat_area.eat_box
 
 func checkIfCanAffordPellet(cost):
 	return cost <= GameManager.currency

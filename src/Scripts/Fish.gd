@@ -16,6 +16,7 @@ func _ready():
 	swim_direct_horizontal = 1
 	screen_size = get_viewport_rect().size
 	chase_flag = 0
+	$AnimatedSprite.play("swim")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
