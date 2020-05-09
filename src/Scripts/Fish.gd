@@ -27,6 +27,7 @@ func _ready():
 	find_swim_location()
 	chase_flag = 0
 	$AnimatedSprite.play("swim")
+	$Name.text = getRandomName()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

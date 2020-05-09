@@ -6,6 +6,7 @@ var mouseState = mouseStates.SELLING
 
 func _ready():
 	mouseState = mouseStates.FEED
+	GameManager.mouseManager = self
 
 func _unhandled_input(event):
 	# Mouse in viewport coordinates
