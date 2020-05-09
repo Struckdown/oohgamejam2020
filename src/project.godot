@@ -16,12 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="oohgamejam2020"
-run/main_scene="res://Scenes/World.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-GameManager="*res://Scripts/GameManager.gd"
 
 [rendering]
 

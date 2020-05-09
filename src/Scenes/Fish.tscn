@@ -11,12 +11,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CircleShape2D" id=3]
+radius = 115.498
+
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 30.6025
 height = 3.58834
-
-[sub_resource type="CircleShape2D" id=3]
-radius = 115.498
 
 [node name="Fish" type="Area2D"]
 script = ExtResource( 2 )
@@ -24,9 +24,11 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 
-[node name="eat_box" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
-
 [node name="detect_box" type="CollisionShape2D" parent="."]
 shape = SubResource( 3 )
-[connection signal="area_shape_entered" from="." to="." method="_on_Fish_area_shape_entered"]
+
+[node name="eat_area" type="Area2D" parent="."]
+
+[node name="eat_box" type="CollisionShape2D" parent="eat_area"]
+shape = SubResource( 2 )
+[connection signal="area_entered" from="." to="." method="_on_Fish_area_entered"]
