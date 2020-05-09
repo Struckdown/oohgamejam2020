@@ -20,7 +20,7 @@ func _unhandled_input(event):
 			mouseStates.SELLING:
 				pass	# Handled by fish being clicked
 			mouseStates.FEED:
-				if checkIfCanAffordPellet(1):
+				if checkIfCanAffordPellet(getPelletCost(activePelletType)):
 					spawnPellet(event.position)
 			_:
 				print("Invalid mouse state")

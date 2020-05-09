@@ -2,6 +2,8 @@ extends Control
 
 export(NodePath) var mouseManagerRef
 var autofeedCost = 10
+onready var autofeedLbl = $Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederLbl
+onready var autofeedCostLbl = $Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederCostLbl2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,9 +22,8 @@ func updateUI():
 	if GameManager.autofeeder != null:
 		autofeedCost = GameManager.autofeeder.autofeederLevel * 10
 		if $Content/MainShopUI.visible:
-			pass
-			#$Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederCostLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
-			#$Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederCostLbl2.text = "$" + str(autofeedCost)
+			autofeedLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
+			autofeedCostLbl.text = "$" + str(autofeedCost)
 
 func _on_FeedButton_pressed():
 	mouseManagerRef.setMouseState("feed")
@@ -35,8 +36,9 @@ func _on_SellButton_pressed():
 
 
 func _on_BuyFish_pressed():
-	GameManager.spawnFish()
-	$BuyFishSFX.play(0)
+	var bought = GameManager.spawnFish()
+	if bought:
+		$BuyFishSFX.play(0)
 
 
 func _on_AutofeederBtn_pressed():
@@ -66,3 +68,4 @@ func _on_Plants_pressed():
 
 func _on_Pellet_pressed(type):
 	mouseManagerRef.activePelletType = type
+	mouseManagerRef.setMouseState("feed")

@@ -154,7 +154,7 @@ __meta__ = {
 
 [node name="BuyFish" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
 margin_right = 154.0
-margin_bottom = 102.0
+margin_bottom = 138.0
 size_flags_vertical = 3
 texture_normal = ExtResource( 5 )
 texture_pressed = SubResource( 1 )
@@ -167,8 +167,8 @@ __meta__ = {
 [node name="BuyFishLabel" type="Label" parent="Content/MainShopUI/VBoxContainer/BuyFish"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 73.8689
-margin_bottom = -14.1311
+margin_top = 98.3042
+margin_bottom = 10.3042
 text = "Fish"
 align = 1
 __meta__ = {
@@ -178,8 +178,8 @@ __meta__ = {
 [node name="BuyFishCostLbl" type="Label" parent="Content/MainShopUI/VBoxContainer/BuyFish"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 88.5301
-margin_bottom = 0.53009
+margin_top = 112.965
+margin_bottom = 24.9654
 text = "$10"
 align = 1
 __meta__ = {
@@ -187,9 +187,9 @@ __meta__ = {
 }
 
 [node name="SellButton" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
-margin_top = 106.0
+margin_top = 142.0
 margin_right = 154.0
-margin_bottom = 208.0
+margin_bottom = 280.0
 size_flags_vertical = 3
 texture_normal = ExtResource( 4 )
 texture_pressed = SubResource( 1 )
@@ -203,9 +203,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
-margin_top = 73.7019
+margin_top = 98.1372
 margin_right = -1.0
-margin_bottom = -9.2981
+margin_bottom = 15.1372
 text = "Sell"
 align = 1
 __meta__ = {
@@ -213,9 +213,9 @@ __meta__ = {
 }
 
 [node name="AutofeederBtn" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
-margin_top = 212.0
+margin_top = 284.0
 margin_right = 154.0
-margin_bottom = 314.0
+margin_bottom = 422.0
 size_flags_vertical = 3
 texture_normal = ExtResource( 8 )
 texture_pressed = SubResource( 1 )
@@ -228,8 +228,8 @@ __meta__ = {
 [node name="AutoFeederLbl" type="Label" parent="Content/MainShopUI/VBoxContainer/AutofeederBtn"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 75.4165
-margin_bottom = -10.5835
+margin_top = 94.1502
+margin_bottom = 8.15021
 text = "Autofeed"
 align = 1
 __meta__ = {
@@ -239,33 +239,9 @@ __meta__ = {
 [node name="AutoFeederCostLbl2" type="Label" parent="Content/MainShopUI/VBoxContainer/AutofeederBtn"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 88.4165
-margin_bottom = 4.4165
+margin_top = 107.15
+margin_bottom = 23.1502
 text = "$10"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="FeedButton" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
-margin_top = 318.0
-margin_right = 154.0
-margin_bottom = 422.0
-size_flags_vertical = 3
-texture_normal = ExtResource( 11 )
-texture_pressed = SubResource( 1 )
-expand = true
-stretch_mode = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="FeedLabel" type="Label" parent="Content/MainShopUI/VBoxContainer/FeedButton"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 70.1184
-margin_bottom = -11.8816
-text = "Current Feed"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -436,7 +412,6 @@ __meta__ = {
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/BuyFish" to="." method="_on_BuyFish_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/SellButton" to="." method="_on_SellButton_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/AutofeederBtn" to="." method="_on_AutofeederBtn_pressed"]
-[connection signal="pressed" from="Content/MainShopUI/VBoxContainer/FeedButton" to="." method="_on_FeedButton_pressed"]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet1" to="." method="_on_Pellet_pressed" binds= [ "pink" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet2" to="." method="_on_Pellet_pressed" binds= [ "yellow" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet3" to="." method="_on_Pellet_pressed" binds= [ "green" ]]

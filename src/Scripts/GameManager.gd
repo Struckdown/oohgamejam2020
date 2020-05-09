@@ -23,9 +23,10 @@ func _ready():
 #func _process(delta):
 #	pass
 
+# returns if successfully spawned fish
 func spawnFish():
 	if currency < 10:
-		return
+		return false
 	currency -= 10
 	var scene = load("res://Scenes/Fish.tscn")
 	var fish = scene.instance()
@@ -38,6 +39,7 @@ func spawnFish():
 	fish.position = Vector2(xpos, ypos)
 	fishArray.append(fish)
 	updateUI()
+	return true
 
 
 func requestSellFish(fish):

@@ -11,11 +11,11 @@ func _ready():
 
 func levelUp():
 	autofeederLevel += 1
-	delay = maxDelay / autofeederLevel
+	delay = float(maxDelay) / float(autofeederLevel)
 	updateSpawnTimer(delay)
 
 func updateSpawnTimer(newDelay):
-	if newDelay != -1:
+	if newDelay > 0:
 		$Timer.wait_time = newDelay
 		$Timer.start()
 	else:
