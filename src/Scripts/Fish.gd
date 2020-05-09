@@ -7,6 +7,7 @@ var swim_direct_horizontal
 var chase_flag
 var chase_food
 var chase_direction
+var fishName
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +19,7 @@ func _ready():
 	chase_flag = 0
 	$AnimatedSprite.play("swim")
 	$AudioStreamPlayer2D.play()
+	$Name.text = getRandomName()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,3 +66,15 @@ func _on_eat_area_input_event(viewport, event, shape_idx):
 			return
 		print("Clicked fish")
 		GameManager.requestSellFish(self)
+
+func getRandomName():
+	print("Hi")
+	var file = File.new()
+	file.open("res://fishNameList.txt", File.READ)
+	var lines = []
+	#while not file.eof_reached():
+	#	lines.append(file.get_line())
+	file.close()
+	#var newName = lines[randi() % lines.size()]
+	return "James"
+	#return newName
