@@ -16,11 +16,13 @@ func _ready():
 #	pass
 
 func updateUI():
-	$Panel/Currency.text = str(GameManager.currency)
+	$Background/Currency.text = str(GameManager.currency)
 	if GameManager.autofeeder != null:
 		autofeedCost = GameManager.autofeeder.autofeederLevel * 10
-		$Panel/AutofeederBtn/AutoFeederLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
-		$Panel/AutofeederBtn/AutoFeederCostLbl2.text = "$" + str(autofeedCost)
+		if $Content/MainShopUI.visible:
+			pass
+			#$Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederCostLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
+			#$Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederCostLbl2.text = "$" + str(autofeedCost)
 
 func _on_FeedButton_pressed():
 	mouseManagerRef.setMouseState("feed")
@@ -43,3 +45,20 @@ func _on_AutofeederBtn_pressed():
 		GameManager.currency -= autofeedCost
 		updateUI()
 
+
+
+func _on_Main_pressed():
+	$Content/MainShopUI.show()
+	$Content/PelletShopUI.hide()
+	updateUI()
+
+
+func _on_Pellets_pressed():
+	$Content/MainShopUI.hide()
+	$Content/PelletShopUI.show()
+	updateUI()
+
+func _on_Plants_pressed():
+	$Content/MainShopUI.hide()
+	$Content/PelletShopUI.hide()
+	updateUI()
