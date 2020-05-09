@@ -75,9 +75,7 @@ func getRandomName():
 	var file = File.new()
 	file.open("res://fishNameList.txt", File.READ)
 	var words = get_lines(file)
-	#var words = text.split(" ")
 	file.close()
-	print(words)
 	var newName = words[randi() % words.size()]
 	return newName
 
