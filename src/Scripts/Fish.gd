@@ -8,13 +8,11 @@ var chase_flag
 var chase_food
 var chase_direction
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if SPEED == null:
+		SPEED = 200
 	swim_direct_horizontal = 1
 	screen_size = get_viewport_rect().size
 	chase_flag = 0
