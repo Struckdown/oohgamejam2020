@@ -10,8 +10,10 @@ var chase_direction
 var fishName
 var fishValue
 var fishType
+var swimType
+var maxSize
 
-var foodDict = {"PINK": 5, "YELLOW": 0, "GREEN": 0, "BLUE": 0}
+var foodDict = {"PINK": 0, "YELLOW": 0, "GREEN": 0, "BLUE": 0}
 
 var rng = RandomNumberGenerator.new()
 var swim_location
@@ -24,6 +26,7 @@ func _ready():
 	evolution_score = 0
 	fishValue = 10
 	fishType = "BASE"
+	swimType = "swim"
 	rng.randomize ( )
 	timer.set_wait_time(0.1)
 	add_child(timer)# Add it to the node tree as the direct child
@@ -113,30 +116,61 @@ func find_swim_location():
 	swim_location = Vector2(rng.randi_range(0,screen_size.x),rng.randi_range(0,screen_size.y))
 
 func evolve():
-	if foodDict["PINK"] == 5 and fishType == "BASE":
+	evolve_type_check()
+	if !maxSize:
 		print('evolve!')
-		var growSFX = load("res://Audio/fishygrows.wav")
-		$AudioStreamPlayer2D.stream = growSFX
-		$AudioStreamPlayer2D.play(0)
-		$AnimatedSprite.play("swim_uni")
-		self.apply_scale(Vector2(1.5,1.5))
-		fishValue += 20
-		fishType = "UNICORN"
+		evolve_fx()
+		$AnimatedSprite.play(swimType)
 		evolution_score = 0
-	elif foodDict["PINK"] == 5 and fishType == "UNICORN":
-		print('evolve!')
-		var growSFX = load("res://Audio/fishygrows.wav")
-		$AudioStreamPlayer2D.stream = growSFX
-		$AudioStreamPlayer2D.play(0)
-		$AnimatedSprite.play("swim_uber")
-		self.apply_scale(Vector2(1.5,1.5))
-		fishValue += 20
-		evolution_score = 0
+		foodDict = {"PINK": 0, "YELLOW": 0, "GREEN": 0, "BLUE": 0}
+
+func evolve_fx():
+	var growSFX = load("res://Audio/fishygrows.wav")
+	$AudioStreamPlayer2D.stream = growSFX
+	$AudioStreamPlayer2D.play(0)
+	self.apply_scale(Vector2(1.5,1.5))
+
+func evolve_type_check():
+	if foodDict["GREEN"] == 5:
+		if fishType == "BASE":
+			fishType = "SKELETON"
+			swimType = "swim_skel"
+			fishValue += 40
+		elif fishType == "SKELETON":
+			fishType = "SHADOW"
+			swimType = "swim_shad"
+			fishValue += 60
+	elif foodDict['YELLOW'] == 5:
+		if fishType == "BASE":
+			fishType = "GOLD"
+			swimType = "swim_gold"
+			fishValue += 60
+		elif fishType == "GOLD":
+			fishType = "BIG_GOLDGOLD"
+			swimType = "swim_gold"
+			fishValue += 120
+	elif foodDict.values().min() >= 1:
+		if fishType == "BASE":
+			fishType = "UNICORN"
+			swimType = "swim_uni"
+			fishValue += 80
+		elif fishType == "UNICORN":
+			fishType = "UBER"
+			swimType = "swim_uber"
+			fishValue += 150
+	elif foodDict['BLUE'] == 5:
+		if fishType == "BIG_BASE":
+			fishType = "DIAMOND"
+			swimType = "swim_diam"
+			fishValue += 400
 	else:
-		print('evolve!')
-		var growSFX = load("res://Audio/fishygrows.wav")
-		$AudioStreamPlayer2D.stream = growSFX
-		$AudioStreamPlayer2D.play(0)
-		self.apply_scale(Vector2(1.5,1.5))
-		fishValue += 10
-		evolution_score = 0
+		if fishType == "BASE":
+			fishType = "MED_BASE"
+			swimType = "swim"
+			fishValue += 20
+		elif fishType == "MED_BASE":
+			fishType = "BIG_BASE"
+			swimType = "swim"
+			fishValue += 30
+		else:
+			maxSize = true
