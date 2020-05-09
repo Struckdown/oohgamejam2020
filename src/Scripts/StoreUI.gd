@@ -15,7 +15,7 @@ func _ready():
 #	pass
 
 func updateUI():
-	$Panel/Currency.text = "Money: " + str(GameManager.currency)
+	$Panel/Currency.text = str(GameManager.currency)
 
 
 func _on_FeedButton_pressed():
