@@ -1,11 +1,11 @@
 # Handles the logic of what the mouse does when clicking
 extends Node
 
-var mouseState = SELLING
-enum {SELLING, FEED}
+enum mouseStates {SELLING, FEED}
+var mouseState = mouseStates.SELLING
 
 func _ready():
-	mouseState = FEED
+	mouseState = mouseStates.FEED
 
 func _input(event):
 	# Mouse in viewport coordinates
@@ -14,13 +14,14 @@ func _input(event):
 			return
 		#IF VALID POSITION #TODO
 		match mouseState:
-			SELLING:
+			mouseStates.SELLING:
 				pass
-			FEED:
+			mouseStates.FEED:
 				if checkIfCanAffordPellet(1):
 					spawnPellet(event.position)
 			_:
 				print("Invalid mouse state")
+		updateUI()
 
    #elif event is InputEventMouseMotion:
 	#   print("Mouse Motion at: ", event.position)
@@ -38,3 +39,16 @@ func spawnPellet(location):
 	var pellet = scene.instance()
 	get_parent().add_child(pellet)
 	pellet.position = location
+
+
+func updateUI():
+	get_parent().find_node("StoreUI").updateUI()
+	
+func setMouseState(state):
+	match state:
+		"sell":
+			mouseState = mouseStates.SELLING
+		"feed":
+			mouseState = mouseStates.FEED
+		_:
+			print("Illegal mouse state")
