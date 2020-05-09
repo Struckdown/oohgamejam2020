@@ -22,7 +22,7 @@ func updateSpawnTimer(newDelay):
 		$Timer.stop()
 
 func spawnPellet(location):
-	GameManager.currency -= 1
+	GameManager.currency -= 0	# Pink Pellets are free now
 	var scene = load("res://Scenes/Pellet.tscn")
 	var pellet = scene.instance()
 	get_parent().add_child(pellet)
