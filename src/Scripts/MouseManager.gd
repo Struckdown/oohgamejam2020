@@ -29,6 +29,9 @@ func _input(event):
    # Print the size of the viewport
    #print("Viewport Resolution is: ", get_viewport_rect().size)
 
+func getOverlappingFish(location):
+	return 0
+
 func checkIfCanAffordPellet(cost):
 	return cost <= GameManager.currency
 
