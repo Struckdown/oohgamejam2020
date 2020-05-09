@@ -8,6 +8,7 @@ var chase_flag
 var chase_food
 var chase_direction
 var fishName
+var fishValue
 
 var rng = RandomNumberGenerator.new()
 var swim_location
@@ -18,6 +19,7 @@ var evolution_score
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	evolution_score = 0
+	fishValue = 10
 	rng.randomize ( )
 	timer.set_wait_time(0.1)
 	add_child(timer)# Add it to the node tree as the direct child
@@ -79,6 +81,7 @@ func end_chase():
 		print('evolve!')
 		$AnimatedSprite.play("swim_uni")
 		self.apply_scale(Vector2(1.5,1.5))
+		fishValue += 10
 		
 
 func _on_eat_area_input_event(viewport, event, shape_idx):
