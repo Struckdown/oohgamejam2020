@@ -20,11 +20,14 @@ func updateUI():
 
 func _on_FeedButton_pressed():
 	mouseManagerRef.setMouseState("feed")
+	$AudioStreamPlayer.play()
 
 
 func _on_SellButton_pressed():
 	mouseManagerRef.setMouseState("sell")
+	$AudioStreamPlayer.play()
 
 
 func _on_BuyFish_pressed():
 	GameManager.spawnFish()
+	$AudioStreamPlayer.play()

@@ -17,6 +17,7 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	chase_flag = 0
 	$AnimatedSprite.play("swim")
+	$AudioStreamPlayer2D.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
