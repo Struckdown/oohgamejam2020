@@ -159,52 +159,62 @@ func evolve_type_check():
 			swimType = "swim_shad"
 			fishValue = 120
 			evoReach = true
+			GameManager.fishDexUnlock(6) #unlock shadow fish
 		elif fishType == "SHADOW":
 			fishType = "SKELETON"
 			swimType = "swim_skel"
 			fishValue = 250
 			evoReach = true
+			GameManager.fishDexUnlock(7)	# unlock skele fish
 	elif foodDict['yellow'] >= 5:
 		if fishType == "BASE":
 			fishType = "GOLD"
 			swimType = "swim_gold"
 			fishValue = 80
 			evoReach = true
+			GameManager.fishDexUnlock(4)	# unlock gold fish
 		elif fishType == "GOLD":
 			fishType = "BIG_GOLD"
 			swimType = "swim_gold"
 			fishValue = 200
 			evoReach = true
+			GameManager.fishDexUnlock(5)	# unlock big gold fish
 	elif foodDict.values().min() >= 2:
 		if fishType == "BASE":
 			fishType = "UNICORN"
 			swimType = "swim_uni"
 			fishValue = 150
 			evoReach = true
+			GameManager.fishDexUnlock(8)	# unlock uni fish
 		elif fishType == "UNICORN":
 			fishType = "UBER"
 			swimType = "swim_uber"
 			fishValue = 300
 			evoReach = true
+			GameManager.fishDexUnlock(9)	# unlock uber fish
 		elif fishType == "DIAMOND":
 			fishType = "RAINBOW"
 			swimType = "swim_rain"
 			fishValue = 800
 			evoReach = true
+			GameManager.fishDexUnlock(0)	# unlock rainbow fish
 	elif foodDict['blue'] >= 5:
 		if fishType == "BIG_BASE":
 			fishType = "DIAMOND"
 			swimType = "swim_diam"
 			fishValue = 500
 			evoReach = true
+			GameManager.fishDexUnlock(3)	# unlock diamond fish
 	else:
 		if fishType == "BASE":
 			fishType = "MED_BASE"
 			swimType = "swim"
 			fishValue = 30
 			evoReach = true
+			GameManager.fishDexUnlock(1)	# unlock med fish
 		elif fishType == "MED_BASE":
 			fishType = "BIG_BASE"
 			swimType = "swim"
 			fishValue = 60
 			evoReach = true
+			GameManager.fishDexUnlock(2)	# unlock big fish

@@ -9,6 +9,7 @@ var mouseManager = null
 var decorationManager = null
 var storeUI
 var autofeeder
+var fishDex
 var fishNames = []
 
 # Called when the node enters the scene tree for the first time.
@@ -61,3 +62,6 @@ func upgradeAutofeeder(type):
 
 func autofeederPause(num, paused):
 	autofeeder.pauseTimer(num, paused)
+
+func fishDexUnlock(page):
+	fishDex.unlockPage(page)
