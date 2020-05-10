@@ -203,7 +203,7 @@ func evolve_type_check():
 			swimType = "swim_rain"
 			fishValue = 800
 			evoReach = true
-			GameManager.fishDexUnlock(0)	# unlock rainbow fish
+			GameManager.fishDexUnlock(10)	# unlock rainbow fish
 	elif foodDict['blue'] >= 5 and fishType == "BIG_BASE":
 		fishType = "DIAMOND"
 		swimType = "swim_diam"
