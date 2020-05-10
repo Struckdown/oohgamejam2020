@@ -20,7 +20,7 @@ margin_top = 99.5982
 margin_right = -561.109
 margin_bottom = -486.402
 rect_scale = Vector2( 3, 3 )
-text = "Game Name"
+text = "Biggy Fishy"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
