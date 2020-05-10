@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buy autofeeder.png-24f1d9d27e5a18811aa7861ea4e71f8a.stex"
+path="res://.import/hand rotated.png-23c95d291d96b443bb3f4fbf82f64e00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/HUD Elements/buy autofeeder.png"
-dest_files=[ "res://.import/buy autofeeder.png-24f1d9d27e5a18811aa7861ea4e71f8a.stex" ]
+source_file="res://Art/HUD Elements/hand rotated.png"
+dest_files=[ "res://.import/hand rotated.png-23c95d291d96b443bb3f4fbf82f64e00.stex" ]
 
 [params]
 
