@@ -109,16 +109,22 @@ func _on_eat_area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if not(event.pressed and event.button_index == 1):	# Return if not left click
 			return
-		print("Clicked fish")
 		GameManager.requestSellFish(self)
 
 func getRandomName():
 	if len(get_parent().fishNames) == 0:
-		set_lines()
-	var newName = get_parent().fishNames[randi() % get_parent().fishNames.size()]
+		getAllNames()
+	var newName
+	if get_parent().fishNames.size() > 0:
+		newName = get_parent().fishNames[randi() % get_parent().fishNames.size()]
+	else:
+		newName = get_parent().fishNames[0]
 	get_parent().fishNames.erase(newName)
 	return newName
-	
+
+func getAllNames():
+	return set_lines()
+
 func set_lines():
 	var file = File.new()
 	file.open("res://fishNameList.txt", File.READ)
