@@ -91,7 +91,7 @@ animations = [ {
 [node name="Bubble" type="AnimatedSprite"]
 frames = SubResource( 14 )
 animation = "bigbubble"
-frame = 2
+frame = 4
 playing = true
 script = ExtResource( 2 )
 

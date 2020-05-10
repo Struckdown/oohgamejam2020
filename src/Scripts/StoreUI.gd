@@ -28,6 +28,10 @@ func updateUI():
 		if $Content/MainShopUI.visible:
 			autofeedLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
 			autofeedCostLbl.text = "$" + str(autofeedCost)
+	$Content/MainShopUI/VBoxContainer/BuyFish/BuyFishCostLbl.text = "$"+str(getFishCost())
+
+func getFishCost():
+	return 10 + 3*len(GameManager.fishArray)
 
 func _on_FeedButton_pressed():
 	mouseManagerRef.setMouseState("feed")
