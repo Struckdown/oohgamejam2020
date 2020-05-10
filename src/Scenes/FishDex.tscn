@@ -1,129 +1,868 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Art/Basic Fish/Fish.png" type="Texture" id=1]
 [ext_resource path="res://Art/HUD Elements/right arrow.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/FishDex.gd" type="Script" id=3]
 [ext_resource path="res://Art/HUD Elements/left arrow.png" type="Texture" id=4]
+[ext_resource path="res://Art/HUD Elements/dex background.png" type="Texture" id=5]
+[ext_resource path="res://Art/Unifish/Unifish.png" type="Texture" id=6]
+[ext_resource path="res://Art/Uberfish/Ubersprite.png" type="Texture" id=7]
+[ext_resource path="res://Art/Goldfish/Goldfish.png" type="Texture" id=8]
+[ext_resource path="res://Art/Shadowfish/Shadowfish.png" type="Texture" id=9]
+[ext_resource path="res://Art/Skelefish/Skelefish.png" type="Texture" id=10]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 64, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 128, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 192, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 256, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 320, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 384, 0, 64, 32 )
 
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 448, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 448, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 448, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 448, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 448, 0, 64, 32 )
+
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "shadow",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
+"loop": true,
+"name": "skele",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"loop": true,
+"name": "unifish",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
+"loop": true,
+"name": "uberfish",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ) ],
+"loop": true,
+"name": "goldfish",
 "speed": 5.0
 } ]
 
 [node name="FishDex" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.506
+anchor_bottom = 0.618
+margin_right = -0.144043
+margin_bottom = 0.199982
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Panel" parent="."]
-margin_left = 149.0
-margin_top = 97.0
-margin_right = 771.0
-margin_bottom = 497.0
+[node name="Master" type="Control" parent="."]
+margin_left = 174.0
+margin_top = 106.0
+margin_right = 687.0
+margin_bottom = 470.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BasicFish" type="Control" parent="Background"]
+[node name="Book" type="Sprite" parent="Master"]
+position = Vector2( 257.41, 182.101 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="ForwardButton" type="TextureButton" parent="Master"]
 anchor_right = 1.0
-anchor_bottom = 1.003
-margin_right = 3.0
-margin_bottom = -0.200012
+anchor_bottom = 0.979
+margin_left = 405.0
+margin_top = 272.0
+margin_right = -76.0
+margin_bottom = -52.356
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Background/BasicFish"]
+[node name="BackwardsButton" type="TextureButton" parent="Master"]
 anchor_right = 1.0
+anchor_bottom = 0.961
+margin_left = 66.0
+margin_top = 270.0
+margin_right = -412.0
+margin_bottom = -47.804
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="Control" parent="Master"]
+anchor_left = 0.004
+anchor_top = 0.007
+anchor_right = 0.5
+anchor_bottom = 0.615
+margin_left = -0.052
+margin_top = -3.548
+margin_right = 256.5
+margin_bottom = 139.14
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BasicFish" type="Control" parent="Master/Content"]
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.128
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/BasicFish"]
+anchor_top = 0.044
+anchor_right = 0.916
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 47.0
-margin_right = -3.0
-margin_bottom = -339.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
 text = "Base Fish"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Background/BasicFish"]
-anchor_right = 1.0
+[node name="FishDescription" type="Label" parent="Master/Content/BasicFish"]
+anchor_top = 0.046
+anchor_right = 0.908
 anchor_bottom = 1.0
-margin_top = 277.0
-margin_right = 1.0
-margin_bottom = -55.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -207.593
+margin_bottom = -57.784
 text = "Super basic fish"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFish"]
+position = Vector2( 331.721, 164.916 )
+frames = SubResource( 8 )
+frame = 6
+playing = true
+
+[node name="BasicFishMed" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.128
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/BasicFishMed"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Medium Base fish"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Background/BasicFish"]
-position = Vector2( 314.657, 170.618 )
+[node name="FishDescription" type="Label" parent="Master/Content/BasicFishMed"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -207.593
+margin_bottom = -57.784
+text = "Super basic fish, but big"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFishMed"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 8 )
+frame = 2
+playing = true
+
+[node name="BasicFishBig" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/BasicFishBig"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Big Base Fish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Master/Content/BasicFishBig"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "Super basic fish. But really big. Like, max big."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFishBig"]
+position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
 frame = 4
 playing = true
 
-[node name="ForwardButton" type="TextureButton" parent="Background"]
-margin_left = 531.574
-margin_top = 336.092
-margin_right = 571.574
-margin_bottom = 376.092
-texture_normal = ExtResource( 2 )
+[node name="DiamondFIsh" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackwardsButton" type="TextureButton" parent="Background"]
-margin_left = 48.0132
-margin_top = 336.092
-margin_right = 88.0132
-margin_bottom = 376.092
-texture_normal = ExtResource( 4 )
+[node name="FishName" type="Label" parent="Master/Content/DiamondFIsh"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Diamond Fish"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="toggled" from="Background/ForwardButton" to="." method="_on_For_toggled"]
-[connection signal="toggled" from="Background/BackwardsButton" to="." method="_on_BackwardsButton_toggled"]
+
+[node name="FishDescription" type="Label" parent="Master/Content/DiamondFIsh"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "This fish saw all the goldfish swimming around and said it could do better. So it evolved  diamondskin. Worth $$$."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/DiamondFIsh"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 8 )
+frame = 6
+playing = true
+
+[node name="GoldFishMed" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/GoldFishMed"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Goldfish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Master/Content/GoldFishMed"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "A fish made of gold! A gold fish! Worth a lot of money!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/GoldFishMed"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 8 )
+animation = "goldfish"
+frame = 4
+playing = true
+
+[node name="GoldFishBig" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/GoldFishBig"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Large Goldfish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Master/Content/GoldFishBig"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "These things get bigger? Now we're talking!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/GoldFishBig"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 8 )
+animation = "goldfish"
+frame = 5
+playing = true
+
+[node name="ShadowFish" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/ShadowFish"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Shadowfish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Master/Content/ShadowFish"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "This fish... has eaten some interesting food. Evolution has made it very intimidating, but it's got a big heart inside."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/ShadowFish"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 8 )
+animation = "shadow"
+frame = 2
+playing = true
+
+[node name="SkeletonFish" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/SkeletonFish"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Skelefish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Master/Content/SkeletonFish"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "A being that lost the need to breathe. Still eats happily though. What a cute fish!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/SkeletonFish"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 8 )
+animation = "skele"
+frame = 3
+playing = true
+
+[node name="UniFish" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/UniFish"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Unifish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Master/Content/UniFish"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "This fish has taken several spellcaster levels and is now very proficient in looking cute."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/UniFish"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 8 )
+animation = "unifish"
+frame = 5
+playing = true
+
+[node name="UberFish" type="Control" parent="Master/Content"]
+visible = false
+anchor_left = 0.105
+anchor_top = 0.012
+anchor_right = 0.931
+anchor_bottom = 0.924
+margin_left = 0.165001
+margin_top = 0.127999
+margin_right = 0.262939
+margin_bottom = -0.144043
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Master/Content/UberFish"]
+anchor_top = 0.044
+anchor_right = 0.916
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = 18.4455
+margin_right = 25.0626
+margin_bottom = -255.784
+text = "Uberfish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Master/Content/UberFish"]
+anchor_top = 0.046
+anchor_right = 0.908
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = 7.78394
+margin_right = -184.593
+margin_bottom = -57.784
+text = "After taking too many levels in spellcasting, power surges through its body, giving it incredible strength."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/UberFish"]
+position = Vector2( 331.721, 164.916 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 8 )
+animation = "uberfish"
+frame = 1
+playing = true
+[connection signal="pressed" from="Master/ForwardButton" to="." method="_on_ForwardButton_pressed"]
+[connection signal="pressed" from="Master/BackwardsButton" to="." method="_on_BackwardsButton_pressed"]

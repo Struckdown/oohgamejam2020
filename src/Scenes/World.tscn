@@ -48,6 +48,12 @@ position = Vector2( 425.526, 616.129 )
 
 [node name="FishDex" parent="." instance=ExtResource( 9 )]
 visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -26.4511
+margin_top = 15.1995
+margin_right = -692.451
+margin_bottom = -296.8
 
 [editable path="Autofeeder"]
 
