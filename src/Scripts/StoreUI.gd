@@ -84,10 +84,11 @@ func _on_Pellet_pressed(type):
 
 # Type is one of delay, bulk, multiplier
 func _on_Plant_pressed(type):
-	if GameManager.currency >= decorationManagerRef.getDecorCost(type):
-		GameManager.currency -= decorationManagerRef.getDecorCost(type)
-		decorationManagerRef.levelup(type)
-		updateUI()
+	if decorationManagerRef.getDecorCost(type) is int:
+		if GameManager.currency >= decorationManagerRef.getDecorCost(type):
+			GameManager.currency -= decorationManagerRef.getDecorCost(type)
+			decorationManagerRef.levelup(type)
+			updateUI()
 
 
 # Win the game
