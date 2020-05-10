@@ -26,9 +26,9 @@ func _ready():
 
 # returns if successfully spawned fish
 func spawnFish():
-	if currency < 10:
+	if currency < storeUI.getFishCost():
 		return false
-	currency -= 10
+	currency -= storeUI.getFishCost()
 	var scene = load("res://Scenes/Fish.tscn")
 	var fish = scene.instance()
 	var root = get_tree().get_root()
@@ -48,6 +48,7 @@ func requestSellFish(fish):
 
 func sellFish(fish):
 	currency += (fish.fishValue * decorationManager.incomeMultiplier)
+	fishArray.erase(fish)
 	fish.queue_free()
 	updateUI()
 

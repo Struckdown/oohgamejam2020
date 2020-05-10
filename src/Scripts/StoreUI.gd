@@ -28,6 +28,10 @@ func updateUI():
 		if $Content/MainShopUI.visible:
 			autofeedLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
 			autofeedCostLbl.text = "$" + str(autofeedCost)
+	$Content/MainShopUI/VBoxContainer/BuyFish/BuyFishCostLbl.text = "$"+str(getFishCost())
+
+func getFishCost():
+	return 10 + 3*len(GameManager.fishArray)
 
 func _on_FeedButton_pressed():
 	mouseManagerRef.setMouseState("feed")
@@ -57,6 +61,7 @@ func _on_Main_pressed():
 	$Content/MainShopUI.show()
 	$Content/PelletShopUI.hide()
 	$Content/DecorationShopUI.hide()
+	$Content/AutofeederShopUI.hide()
 	updateUI()
 
 
@@ -64,12 +69,21 @@ func _on_Pellets_pressed():
 	$Content/MainShopUI.hide()
 	$Content/PelletShopUI.show()
 	$Content/DecorationShopUI.hide()
+	$Content/AutofeederShopUI.hide()
 	updateUI()
 
 func _on_Plants_pressed():
 	$Content/MainShopUI.hide()
 	$Content/PelletShopUI.hide()
 	$Content/DecorationShopUI.show()
+	$Content/AutofeederShopUI.hide()
+	updateUI()
+
+func _on_Autofeeder_pressed():
+	$Content/MainShopUI.hide()
+	$Content/PelletShopUI.hide()
+	$Content/DecorationShopUI.hide()
+	$Content/AutofeederShopUI.show()
 	updateUI()
 
 
@@ -80,12 +94,16 @@ func _on_Pellet_pressed(type):
 
 # Type is one of delay, bulk, multiplier
 func _on_Plant_pressed(type):
-	if GameManager.currency >= decorationManagerRef.getDecorCost(type):
-		GameManager.currency -= decorationManagerRef.getDecorCost(type)
-		decorationManagerRef.levelup(type)
-		updateUI()
+	if decorationManagerRef.getDecorCost(type) is int:
+		if GameManager.currency >= decorationManagerRef.getDecorCost(type):
+			GameManager.currency -= decorationManagerRef.getDecorCost(type)
+			decorationManagerRef.levelup(type)
+			updateUI()
 
 
 # Win the game
 func _on_Plant4_pressed():
 	pass # Replace with function body.
+
+
+

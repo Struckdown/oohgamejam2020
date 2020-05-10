@@ -1,13 +1,13 @@
 extends Node2D
 
 
-var passiveCosts = [50, 250, 500]
-var passiveIncomeDelay = [-1, 5, 3, 1]
+var passiveCosts = [50, 250, 500, "???"]
+var passiveIncomeDelay = [-1, 3, 1, 0.2]
 
-var passiveBulkCosts = [100, 400, 750]
+var passiveBulkCosts = [100, 400, 750, "???"]
 var passiveIncomeAmounts = [1, 2, 3, 5]
 
-var incomeMultiplierCosts = [150, 350, 1000]
+var incomeMultiplierCosts = [150, 350, 1000, "???"]
 var incomeMultipliers = [1, 1.5, 2.5, 4]
 
 # Key values
@@ -28,20 +28,20 @@ func levelup(type):
 	match type:
 		"delay":
 			if passiveIncomeLevel < 3:
-				passiveIncomeLevel += 1
 				$Fern.show()
 				$Fern.frame = passiveIncomeLevel
+				passiveIncomeLevel += 1
 		"bulk":
 			if passiveIncomeAmountLevel < 3:
-				passiveIncomeAmountLevel += 1
 				$Starfish.show()
 				$Starfish.frame = passiveIncomeAmountLevel
+				passiveIncomeAmountLevel += 1
 		"multiplier":
 			if incomeMultiplierLevel < 3:
-				incomeMultiplierLevel += 1
 				incomeMultiplier = incomeMultipliers[incomeMultiplierLevel]
 				$LongPlant.show()
 				$LongPlant.frame = incomeMultiplierLevel
+				incomeMultiplierLevel += 1
 		_:
 			"Invalid type, try passive, bulk, multiplier or incomeDelay"
 	if passiveIncomeLevel > 0:
