@@ -1,29 +1,22 @@
-tool
 extends Control
 
-export(int) var initialCost setget setInitialCost
+export(int) var initialCost
 var currentCost = initialCost
 export(int) var feederType
+var level = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var img = load("res://Art/HUD Elements/buy autofeeder (" + str(feederType) + ").png")
 	$AutofeederBtn.texture_normal = img
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-func setInitialCost(val):
-	$AutoFeederCostLbl2.text = "$"+str(val)
-	currentCost = val
+	$AutoFeederCostLbl2.text = "$"+str(initialCost)
+	currentCost = initialCost
 	
-
 
 func _on_AutofeederBtn_pressed():
 	if GameManager.currency >= currentCost:
 		GameManager.currency -= currentCost
+		level += 1
 		GameManager.upgradeAutofeeder(feederType)
 		incrementCost()
 		$CheckBox.pressed = true
@@ -31,7 +24,8 @@ func _on_AutofeederBtn_pressed():
 		GameManager.updateUI()
 
 func incrementCost():
-	currentCost *= 2
+	print(currentCost)
+	currentCost = floor(initialCost * pow(1.5, level))
 	$AutoFeederCostLbl2.text = "$"+str(currentCost)
 
 

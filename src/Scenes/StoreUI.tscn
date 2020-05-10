@@ -617,12 +617,14 @@ __meta__ = {
 margin_right = 153.0
 margin_bottom = 102.0
 size_flags_vertical = 3
+initialCost = 10
 
 [node name="AutofeederBtn2" parent="Content/AutofeederShopUI/VBoxContainer" instance=ExtResource( 20 )]
 margin_top = 106.0
 margin_right = 153.0
 margin_bottom = 208.0
 size_flags_vertical = 3
+initialCost = 15
 feederType = 1
 
 [node name="AutofeederBtn3" parent="Content/AutofeederShopUI/VBoxContainer" instance=ExtResource( 20 )]
@@ -630,6 +632,7 @@ margin_top = 212.0
 margin_right = 153.0
 margin_bottom = 314.0
 size_flags_vertical = 3
+initialCost = 25
 feederType = 2
 
 [node name="AutofeederBtn4" parent="Content/AutofeederShopUI/VBoxContainer" instance=ExtResource( 20 )]
@@ -637,6 +640,7 @@ margin_top = 318.0
 margin_right = 153.0
 margin_bottom = 422.0
 size_flags_vertical = 3
+initialCost = 30
 feederType = 3
 [connection signal="pressed" from="Tabs/HBoxContainer/Autofeed" to="." method="_on_Autofeeder_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/Plants" to="." method="_on_Plants_pressed"]

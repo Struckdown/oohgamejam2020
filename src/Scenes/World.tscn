@@ -33,7 +33,7 @@ decorationManagerRef = NodePath("../DecorationManager")
 [node name="Autofeeder" parent="." instance=ExtResource( 6 )]
 position = Vector2( 33.8806, 9.24018 )
 
-[node name="CollisionShape2D" parent="Autofeeder" index="1"]
+[node name="CollisionShape2D" parent="Autofeeder" index="4"]
 position = Vector2( 401.593, 18.5708 )
 
 [node name="Castle" type="Sprite" parent="."]
