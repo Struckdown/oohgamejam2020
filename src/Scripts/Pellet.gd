@@ -30,3 +30,7 @@ func setPelletType(type):
 		"blue":
 			pelletType = pelletTypeOptions.BLUE
 	$Sprite.frame = pelletType + len(pelletTypeOptions) * (randi() % 6)
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
