@@ -11,8 +11,9 @@ var fishName
 var fishValue
 var fishType
 var swimType
-var maxSize
+var evoReach = false
 var hungry
+var growthScale = 1.5
 
 var foodDict = {"pink": 0, "yellow": 0, "green": 0, "blue": 0}
 var pelletTypeDict = {0:'pink',1:"green",2:"yellow",3:"blue"}
@@ -112,12 +113,19 @@ func _on_eat_area_input_event(viewport, event, shape_idx):
 		GameManager.requestSellFish(self)
 
 func getRandomName():
+	if len(get_parent().fishNames) == 0:
+		set_lines()
+	var newName = get_parent().fishNames[randi() % get_parent().fishNames.size()]
+	get_parent().fishNames.erase(newName)
+	return newName
+	
+func set_lines():
 	var file = File.new()
 	file.open("res://fishNameList.txt", File.READ)
 	var words = get_lines(file)
 	file.close()
-	var newName = words[randi() % words.size()]
-	return newName
+	get_parent().fishNames = words
+
 
 static func get_lines(file):
 	var lines = []
@@ -130,18 +138,19 @@ func find_swim_location():
 
 func evolve():
 	evolve_type_check()
-	if !maxSize:
-		print('evolve!')
-		evolve_fx()
+	if evoReach:
+		#print('evolve!')
+		evolve_fx(growthScale)
 		$AnimatedSprite.play(swimType)
 		evolution_score = 0
 		foodDict = {"pink": 0, "yellow": 0, "green": 0, "blue": 0}
+		evoReach = false
 
-func evolve_fx():
+func evolve_fx(scale):
 	var growSFX = load("res://Audio/fishygrows.wav")
 	$AudioStreamPlayer2D.stream = growSFX
 	$AudioStreamPlayer2D.play(0)
-	self.apply_scale(Vector2(1.5,1.5))
+	self.apply_scale(Vector2(scale,scale))
 
 func evolve_type_check():
 	if foodDict["green"] >= 5:
@@ -149,45 +158,53 @@ func evolve_type_check():
 			fishType = "SHADOW"
 			swimType = "swim_shad"
 			fishValue = 120
+			evoReach = true
 		elif fishType == "SHADOW":
 			fishType = "SKELETON"
 			swimType = "swim_skel"
 			fishValue = 250
+			evoReach = true
 	elif foodDict['yellow'] >= 5:
 		if fishType == "BASE":
 			fishType = "GOLD"
 			swimType = "swim_gold"
 			fishValue = 80
+			evoReach = true
 		elif fishType == "GOLD":
 			fishType = "BIG_GOLD"
 			swimType = "swim_gold"
 			fishValue = 200
+			evoReach = true
 	elif foodDict.values().min() >= 2:
 		if fishType == "BASE":
 			fishType = "UNICORN"
 			swimType = "swim_uni"
 			fishValue = 150
+			evoReach = true
 		elif fishType == "UNICORN":
 			fishType = "UBER"
 			swimType = "swim_uber"
 			fishValue = 300
+			evoReach = true
 		elif fishType == "DIAMOND":
 			fishType = "RAINBOW"
 			swimType = "swim_rain"
 			fishValue = 800
+			evoReach = true
 	elif foodDict['blue'] >= 5:
 		if fishType == "BIG_BASE":
 			fishType = "DIAMOND"
 			swimType = "swim_diam"
 			fishValue = 500
+			evoReach = true
 	else:
 		if fishType == "BASE":
 			fishType = "MED_BASE"
 			swimType = "swim"
 			fishValue = 30
+			evoReach = true
 		elif fishType == "MED_BASE":
 			fishType = "BIG_BASE"
 			swimType = "swim"
 			fishValue = 60
-		else:
-			maxSize = true
+			evoReach = true
