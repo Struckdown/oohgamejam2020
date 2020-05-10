@@ -112,12 +112,19 @@ func _on_eat_area_input_event(viewport, event, shape_idx):
 		GameManager.requestSellFish(self)
 
 func getRandomName():
+	if len(get_parent().fishNames) == 0:
+		set_lines()
+	var newName = get_parent().fishNames[randi() % get_parent().fishNames.size()]
+	get_parent().fishNames.erase(newName)
+	return newName
+	
+func set_lines():
 	var file = File.new()
 	file.open("res://fishNameList.txt", File.READ)
 	var words = get_lines(file)
 	file.close()
-	var newName = words[randi() % words.size()]
-	return newName
+	get_parent().fishNames = words
+
 
 static func get_lines(file):
 	var lines = []
