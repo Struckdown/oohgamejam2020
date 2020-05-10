@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Fish.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Scenes/Autofeeder.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/Decorations/castle.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/DecorationManager.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Bubble.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/BubbleSpawner.tscn" type="PackedScene" id=10]
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
@@ -38,4 +40,13 @@ position = Vector2( 452.057, 500.199 )
 scale = Vector2( 1.19345, 1.22972 )
 texture = ExtResource( 7 )
 
+[node name="Bubble" parent="." instance=ExtResource( 9 )]
+position = Vector2( 264.597, 440.921 )
+frame = 2
+
+[node name="BubbleSpawner" parent="." instance=ExtResource( 10 )]
+position = Vector2( 425.526, 616.129 )
+
 [editable path="Autofeeder"]
+
+[editable path="BubbleSpawner"]
