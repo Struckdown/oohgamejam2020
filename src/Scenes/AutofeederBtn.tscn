@@ -56,6 +56,7 @@ margin_left = 102.784
 margin_top = 32.7483
 margin_right = 146.784
 margin_bottom = 56.7483
+disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -71,3 +72,5 @@ text = "On"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="AutofeederBtn" to="." method="_on_AutofeederBtn_pressed"]
+[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]

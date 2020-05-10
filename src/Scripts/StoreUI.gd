@@ -23,11 +23,7 @@ func updateUI():
 	$Content/DecorationShopUI/VBoxContainer/DelayDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("delay"))
 	$Content/DecorationShopUI/VBoxContainer/BulkDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("bulk"))
 	$Content/DecorationShopUI/VBoxContainer/MultiplierDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("multiplier"))
-	if GameManager.autofeeder != null:
-		autofeedCost = GameManager.autofeeder.autofeederLevel * 10
-		if $Content/MainShopUI.visible:
-			autofeedLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
-			autofeedCostLbl.text = "$" + str(autofeedCost)
+	#TODO UPDATE SHOP UI COSTS FOR AUTOFEEDER LOGIC?
 	$Content/MainShopUI/VBoxContainer/BuyFish/BuyFishCostLbl.text = "$"+str(getFishCost())
 
 func getFishCost():

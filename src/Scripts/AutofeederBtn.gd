@@ -19,3 +19,21 @@ func setInitialCost(val):
 	$AutoFeederCostLbl2.text = "$"+str(val)
 	currentCost = val
 	
+
+
+func _on_AutofeederBtn_pressed():
+	if GameManager.currency >= currentCost:
+		GameManager.currency -= currentCost
+		GameManager.upgradeAutofeeder(feederType)
+		incrementCost()
+		$CheckBox.pressed = true
+		$CheckBox.disabled = false
+		GameManager.updateUI()
+
+func incrementCost():
+	currentCost *= 2
+	$AutoFeederCostLbl2.text = "$"+str(currentCost)
+
+
+func _on_CheckBox_toggled(button_pressed):
+	GameManager.autofeederPause(feederType, !button_pressed)

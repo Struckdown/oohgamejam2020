@@ -54,3 +54,9 @@ func sellFish(fish):
 
 func updateUI():
 	storeUI.updateUI()
+
+func upgradeAutofeeder(type):
+	autofeeder.levelUp(type)
+
+func autofeederPause(num, paused):
+	autofeeder.pauseTimer(num, paused)
