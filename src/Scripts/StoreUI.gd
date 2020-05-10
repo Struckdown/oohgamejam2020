@@ -3,8 +3,6 @@ extends Control
 export(NodePath) var mouseManagerRef
 export(NodePath) var decorationManagerRef
 var autofeedCost = 10
-onready var autofeedLbl = $Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederLbl
-onready var autofeedCostLbl = $Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederCostLbl2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,7 +21,6 @@ func updateUI():
 	$Content/DecorationShopUI/VBoxContainer/DelayDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("delay"))
 	$Content/DecorationShopUI/VBoxContainer/BulkDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("bulk"))
 	$Content/DecorationShopUI/VBoxContainer/MultiplierDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("multiplier"))
-	#TODO UPDATE SHOP UI COSTS FOR AUTOFEEDER LOGIC?
 	$Content/MainShopUI/VBoxContainer/BuyFish/BuyFishCostLbl.text = "$"+str(getFishCost())
 
 func getFishCost():
