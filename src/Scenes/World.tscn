@@ -34,7 +34,7 @@ position = Vector2( 33.8806, 9.24018 )
 position = Vector2( 401.593, 18.5708 )
 
 [node name="Castle" type="Sprite" parent="."]
-position = Vector2( 677.321, 500.199 )
+position = Vector2( 452.057, 500.199 )
 scale = Vector2( 1.19345, 1.22972 )
 texture = ExtResource( 7 )
 

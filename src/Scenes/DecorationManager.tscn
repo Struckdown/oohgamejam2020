@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/DecorationManager.gd" type="Script" id=1]
 [ext_resource path="res://Art/Decorations/stubby plant.png" type="Texture" id=2]
+[ext_resource path="res://Art/Decorations/starfish.png" type="Texture" id=3]
+[ext_resource path="res://Art/Decorations/long plant.png" type="Texture" id=4]
 
 [node name="DecorationManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -12,5 +14,17 @@ script = ExtResource( 1 )
 visible = false
 position = Vector2( 188.116, 545.984 )
 texture = ExtResource( 2 )
+hframes = 3
+
+[node name="Starfish" type="Sprite" parent="."]
+visible = false
+position = Vector2( 693.382, 558.616 )
+texture = ExtResource( 3 )
+hframes = 3
+
+[node name="LongPlant" type="Sprite" parent="."]
+visible = false
+position = Vector2( 327.064, 432.299 )
+texture = ExtResource( 4 )
 hframes = 3
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

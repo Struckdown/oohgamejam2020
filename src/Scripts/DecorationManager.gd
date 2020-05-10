@@ -31,10 +31,14 @@ func levelup(type):
 		"bulk":
 			if passiveIncomeAmountLevel < 3:
 				passiveIncomeAmountLevel += 1
+				$Starfish.show()
+				$Starfish.frame = passiveIncomeAmountLevel
 		"multiplier":
 			if incomeMultiplierLevel < 3:
 				incomeMultiplierLevel += 1
 				incomeMultiplier = incomeMultipliers[incomeMultiplierLevel]
+				$LongPlant.show()
+				$LongPlant.frame = incomeMultiplierLevel
 		_:
 			"Invalid type, try passive, bulk, multiplier or incomeDelay"
 	if passiveIncomeLevel > 0:
