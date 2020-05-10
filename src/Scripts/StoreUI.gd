@@ -61,6 +61,7 @@ func _on_Main_pressed():
 	$Content/MainShopUI.show()
 	$Content/PelletShopUI.hide()
 	$Content/DecorationShopUI.hide()
+	$Content/AutofeederShopUI.hide()
 	updateUI()
 
 
@@ -68,12 +69,21 @@ func _on_Pellets_pressed():
 	$Content/MainShopUI.hide()
 	$Content/PelletShopUI.show()
 	$Content/DecorationShopUI.hide()
+	$Content/AutofeederShopUI.hide()
 	updateUI()
 
 func _on_Plants_pressed():
 	$Content/MainShopUI.hide()
 	$Content/PelletShopUI.hide()
 	$Content/DecorationShopUI.show()
+	$Content/AutofeederShopUI.hide()
+	updateUI()
+
+func _on_Autofeeder_pressed():
+	$Content/MainShopUI.hide()
+	$Content/PelletShopUI.hide()
+	$Content/DecorationShopUI.hide()
+	$Content/AutofeederShopUI.show()
 	updateUI()
 
 
@@ -94,3 +104,6 @@ func _on_Plant_pressed(type):
 # Win the game
 func _on_Plant4_pressed():
 	pass # Replace with function body.
+
+
+

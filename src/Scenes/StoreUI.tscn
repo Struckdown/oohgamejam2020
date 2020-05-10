@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Art/HUD Elements/shop button.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/StoreUI.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Art/HUD Elements/stubby plant icon.png" type="Texture" id=3]
 [ext_resource path="res://Art/HUD Elements/Sell Fish.png" type="Texture" id=4]
 [ext_resource path="res://Art/HUD Elements/More Fish.png" type="Texture" id=5]
 [ext_resource path="res://Audio/button.wav" type="AudioStream" id=6]
@@ -15,7 +15,7 @@
 [ext_resource path="res://Art/HUD Elements/green pellet.png" type="Texture" id=13]
 [ext_resource path="res://Art/Decorations/long plant icon.png" type="Texture" id=14]
 [ext_resource path="res://Art/HUD Elements/starfish icon.png" type="Texture" id=15]
-[ext_resource path="res://Art/HUD Elements/long plant icon.png" type="Texture" id=16]
+[ext_resource path="res://Art/HUD Elements/coin.png" type="Texture" id=16]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -100,8 +100,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Autofeed" type="Button" parent="Tabs/HBoxContainer"]
+margin_right = 147.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+text = "Autofeeders"
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Plants" type="Button" parent="Tabs/HBoxContainer"]
-margin_right = 197.0
+margin_left = 151.0
+margin_right = 298.0
 margin_bottom = 33.0
 size_flags_horizontal = 3
 text = "Decor"
@@ -110,8 +120,8 @@ __meta__ = {
 }
 
 [node name="Pellets" type="Button" parent="Tabs/HBoxContainer"]
-margin_left = 201.0
-margin_right = 398.0
+margin_left = 302.0
+margin_right = 449.0
 margin_bottom = 33.0
 size_flags_horizontal = 3
 text = "Pellets"
@@ -120,7 +130,7 @@ __meta__ = {
 }
 
 [node name="Main" type="Button" parent="Tabs/HBoxContainer"]
-margin_left = 402.0
+margin_left = 453.0
 margin_right = 600.0
 margin_bottom = 33.0
 size_flags_horizontal = 3
@@ -138,6 +148,7 @@ __meta__ = {
 }
 
 [node name="MainShopUI" type="Control" parent="Content"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -412,7 +423,6 @@ __meta__ = {
 }
 
 [node name="DecorationShopUI" type="Control" parent="Content"]
-visible = false
 anchor_right = 3.464
 anchor_bottom = 4.563
 margin_left = 4.0
@@ -435,7 +445,7 @@ __meta__ = {
 margin_right = 152.0
 margin_bottom = 100.0
 size_flags_vertical = 3
-texture_normal = ExtResource( 16 )
+texture_normal = ExtResource( 3 )
 texture_pressed = SubResource( 1 )
 expand = true
 stretch_mode = 3
@@ -550,7 +560,7 @@ margin_top = 312.0
 margin_right = 152.0
 margin_bottom = 413.0
 size_flags_vertical = 3
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 16 )
 texture_pressed = SubResource( 1 )
 expand = true
 stretch_mode = 3
@@ -581,6 +591,166 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AutofeederShopUI" type="Control" parent="Content"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/AutofeederShopUI"]
+anchor_right = 4.812
+anchor_bottom = 11.722
+margin_right = 0.0159912
+margin_bottom = 0.00799561
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutofeederBtn" type="TextureButton" parent="Content/AutofeederShopUI/VBoxContainer"]
+margin_right = 153.0
+margin_bottom = 102.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 8 )
+texture_pressed = SubResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederLbl" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 94.1502
+margin_bottom = 8.15021
+text = "Autofeed"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederCostLbl2" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 107.15
+margin_bottom = 23.1502
+text = "$10"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutofeederBtn2" type="TextureButton" parent="Content/AutofeederShopUI/VBoxContainer"]
+margin_top = 106.0
+margin_right = 153.0
+margin_bottom = 208.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 8 )
+texture_pressed = SubResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederLbl" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 94.1502
+margin_bottom = 8.15021
+text = "Autofeed"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederCostLbl2" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 107.15
+margin_bottom = 23.1502
+text = "$10"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutofeederBtn3" type="TextureButton" parent="Content/AutofeederShopUI/VBoxContainer"]
+margin_top = 212.0
+margin_right = 153.0
+margin_bottom = 314.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 8 )
+texture_pressed = SubResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederLbl" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 94.1502
+margin_bottom = 8.15021
+text = "Autofeed"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederCostLbl2" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 107.15
+margin_bottom = 23.1502
+text = "$10"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutofeederBtn4" type="TextureButton" parent="Content/AutofeederShopUI/VBoxContainer"]
+margin_top = 318.0
+margin_right = 153.0
+margin_bottom = 422.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 8 )
+texture_pressed = SubResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederLbl" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 94.1502
+margin_bottom = 8.15021
+text = "Autofeed"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoFeederCostLbl2" type="Label" parent="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 107.15
+margin_bottom = 23.1502
+text = "$10"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Tabs/HBoxContainer/Autofeed" to="." method="_on_Autofeeder_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/Plants" to="." method="_on_Plants_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/Pellets" to="." method="_on_Pellets_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/Main" to="." method="_on_Main_pressed"]
@@ -595,3 +765,7 @@ __meta__ = {
 [connection signal="pressed" from="Content/DecorationShopUI/VBoxContainer/BulkDecor" to="." method="_on_Plant_pressed" binds= [ "bulk" ]]
 [connection signal="pressed" from="Content/DecorationShopUI/VBoxContainer/MultiplierDecor" to="." method="_on_Plant_pressed" binds= [ "multiplier" ]]
 [connection signal="pressed" from="Content/DecorationShopUI/VBoxContainer/WinDecor" to="." method="_on_Plant4_pressed"]
+[connection signal="pressed" from="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn" to="." method="_on_AutofeederBtn_pressed"]
+[connection signal="pressed" from="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn2" to="." method="_on_AutofeederBtn_pressed"]
+[connection signal="pressed" from="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn3" to="." method="_on_AutofeederBtn_pressed"]
+[connection signal="pressed" from="Content/AutofeederShopUI/VBoxContainer/AutofeederBtn4" to="." method="_on_AutofeederBtn_pressed"]
