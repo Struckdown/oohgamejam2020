@@ -98,7 +98,9 @@ func _on_Plant_pressed(type):
 
 # Win the game
 func _on_Plant4_pressed():
-	pass # Replace with function body.
+	if GameManager.currency >= 10000:
+		GameManager.currency -= 10000
+		get_tree().change_scene("res://Scenes/winGameScreen.tscn")
 
 
 
