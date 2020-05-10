@@ -2,12 +2,14 @@ extends Control
 
 export(NodePath) var mouseManagerRef
 export(NodePath) var decorationManagerRef
+export(NodePath) var fishDexRef
 var autofeedCost = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	mouseManagerRef = get_node(mouseManagerRef)
 	decorationManagerRef = get_node(decorationManagerRef)
+	fishDexRef = get_node(fishDexRef)
 	GameManager.storeUI = self
 	updateUI()
 
@@ -100,3 +102,7 @@ func _on_Plant4_pressed():
 
 
 
+
+
+func _on_FishDex_pressed():
+	fishDexRef.toggleVis()

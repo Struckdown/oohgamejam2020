@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Fish.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Autofeeder.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/Decorations/castle.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/DecorationManager.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/FishDex.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/BubbleSpawner.tscn" type="PackedScene" id=10]
 
 [node name="World" type="Node"]
@@ -29,6 +30,7 @@ position = Vector2( 93, 316 )
 margin_bottom = 4.0
 mouseManagerRef = NodePath("../MouseManager")
 decorationManagerRef = NodePath("../DecorationManager")
+fishDexRef = NodePath("../FishDex")
 
 [node name="Autofeeder" parent="." instance=ExtResource( 6 )]
 position = Vector2( 33.8806, 9.24018 )
@@ -43,6 +45,9 @@ texture = ExtResource( 7 )
 
 [node name="BubbleSpawner" parent="." instance=ExtResource( 10 )]
 position = Vector2( 425.526, 616.129 )
+
+[node name="FishDex" parent="." instance=ExtResource( 9 )]
+visible = false
 
 [editable path="Autofeeder"]
 

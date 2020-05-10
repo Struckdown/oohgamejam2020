@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Art/HUD Elements/shop button.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/StoreUI.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Art/HUD Elements/More Fish.png" type="Texture" id=5]
 [ext_resource path="res://Audio/button.wav" type="AudioStream" id=6]
 [ext_resource path="res://Art/HUD Elements/money.png" type="Texture" id=7]
+[ext_resource path="res://Art/HUD Elements/Dex.png" type="Texture" id=8]
 [ext_resource path="res://Audio/buyfish.wav" type="AudioStream" id=9]
 [ext_resource path="res://Art/HUD Elements/blue pellet.png" type="Texture" id=10]
 [ext_resource path="res://Art/HUD Elements/pink pellet.png" type="Texture" id=11]
@@ -168,7 +169,7 @@ __meta__ = {
 
 [node name="BuyFish" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
 margin_right = 153.0
-margin_bottom = 209.0
+margin_bottom = 138.0
 size_flags_vertical = 3
 texture_normal = ExtResource( 5 )
 texture_pressed = SubResource( 1 )
@@ -181,8 +182,8 @@ __meta__ = {
 [node name="BuyFishLabel" type="Label" parent="Content/MainShopUI/VBoxContainer/BuyFish"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 129.485
-margin_bottom = 41.485
+margin_top = 98.0598
+margin_bottom = 10.0598
 text = "Fish"
 align = 1
 __meta__ = {
@@ -192,8 +193,8 @@ __meta__ = {
 [node name="BuyFishCostLbl" type="Label" parent="Content/MainShopUI/VBoxContainer/BuyFish"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 144.146
-margin_bottom = 56.1461
+margin_top = 112.721
+margin_bottom = 24.7209
 text = "$10"
 align = 1
 __meta__ = {
@@ -201,9 +202,9 @@ __meta__ = {
 }
 
 [node name="SellButton" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
-margin_top = 213.0
+margin_top = 142.0
 margin_right = 153.0
-margin_bottom = 422.0
+margin_bottom = 280.0
 size_flags_vertical = 3
 texture_normal = ExtResource( 4 )
 texture_pressed = SubResource( 1 )
@@ -217,10 +218,36 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
-margin_top = 129.318
+margin_top = 95.7977
 margin_right = -1.0
-margin_bottom = 46.318
+margin_bottom = 12.7977
 text = "Sell"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDex" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
+margin_top = 284.0
+margin_right = 153.0
+margin_bottom = 422.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 8 )
+texture_pressed = SubResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDexLbl" type="Label" parent="Content/MainShopUI/VBoxContainer/FishDex"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 115.0
+margin_right = -1.0
+margin_bottom = -2.0
+text = "FishDex"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -612,6 +639,7 @@ feederType = 3
 [connection signal="pressed" from="Tabs/HBoxContainer/Main" to="." method="_on_Main_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/BuyFish" to="." method="_on_BuyFish_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/SellButton" to="." method="_on_SellButton_pressed"]
+[connection signal="pressed" from="Content/MainShopUI/VBoxContainer/FishDex" to="." method="_on_FishDex_pressed"]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet1" to="." method="_on_Pellet_pressed" binds= [ "pink" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet2" to="." method="_on_Pellet_pressed" binds= [ "yellow" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet3" to="." method="_on_Pellet_pressed" binds= [ "green" ]]

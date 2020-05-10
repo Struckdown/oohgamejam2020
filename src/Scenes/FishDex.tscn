@@ -1,0 +1,129 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Art/Basic Fish/Fish.png" type="Texture" id=1]
+[ext_resource path="res://Art/HUD Elements/right arrow.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/FishDex.gd" type="Script" id=3]
+[ext_resource path="res://Art/HUD Elements/left arrow.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="FishDex" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="."]
+margin_left = 149.0
+margin_top = 97.0
+margin_right = 771.0
+margin_bottom = 497.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BasicFish" type="Control" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.003
+margin_right = 3.0
+margin_bottom = -0.200012
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishName" type="Label" parent="Background/BasicFish"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 47.0
+margin_right = -3.0
+margin_bottom = -339.0
+text = "Base Fish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FishDescription" type="Label" parent="Background/BasicFish"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 277.0
+margin_right = 1.0
+margin_bottom = -55.0
+text = "Super basic fish"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Background/BasicFish"]
+position = Vector2( 314.657, 170.618 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 8 )
+frame = 4
+playing = true
+
+[node name="ForwardButton" type="TextureButton" parent="Background"]
+margin_left = 531.574
+margin_top = 336.092
+margin_right = 571.574
+margin_bottom = 376.092
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackwardsButton" type="TextureButton" parent="Background"]
+margin_left = 48.0132
+margin_top = 336.092
+margin_right = 88.0132
+margin_bottom = 376.092
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="toggled" from="Background/ForwardButton" to="." method="_on_For_toggled"]
+[connection signal="toggled" from="Background/BackwardsButton" to="." method="_on_BackwardsButton_toggled"]
