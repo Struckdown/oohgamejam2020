@@ -10,7 +10,7 @@ var unlocked = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameManager.fishDex = self
-	var children = $Master/Content.get_children()
+	var children = $Master/Node2D/Content.get_children()
 	for child in children:
 		pages.append(child)
 		unlocked.append(false)
@@ -30,10 +30,10 @@ func changePage(newPage):
 		p.hide()
 	if unlocked[currentPage]:
 		pages[currentPage].show()
-		$Master/MysteryFish.hide()
+		$Master/Node2D/MysteryFish.hide()
 	else:
-		$Master/MysteryFish.show()
-	$Master/PageNum.text = str(currentPage+1)
+		$Master/Node2D/MysteryFish.show()
+	$Master/Node2D/PageNum.text = str(currentPage+1)
 
 
 func _on_ForwardButton_pressed():
