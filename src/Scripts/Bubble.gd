@@ -6,7 +6,14 @@ var sinStr = ((randf()*0.3) + 0.5) * 0.3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var bubbleType = randi() % 3
+	match bubbleType:
+		0:
+			play("bigbubble")
+		1:
+			play("default")
+		2:
+			play("lilbubble")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
