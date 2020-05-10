@@ -99,9 +99,11 @@ func end_chase(food):
 	evolution_score += 1
 	if evolution_score == 8:
 		evolve()
+	if evolution_score > 8:
+		evolution_score = 0
+		foodDict = {"pink": 0, "yellow": 0, "green": 0, "blue": 0}
 		
 		
-
 func _on_eat_area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if not(event.pressed and event.button_index == 1):	# Return if not left click
@@ -144,44 +146,48 @@ func evolve_fx():
 func evolve_type_check():
 	if foodDict["green"] >= 5:
 		if fishType == "BASE":
-			fishType = "SKELETON"
-			swimType = "swim_skel"
-			fishValue += 40
-		elif fishType == "SKELETON":
 			fishType = "SHADOW"
 			swimType = "swim_shad"
-			fishValue += 60
+			fishValue = 120
+		elif fishType == "SHADOW":
+			fishType = "SKELETON"
+			swimType = "swim_skel"
+			fishValue = 250
 	elif foodDict['yellow'] >= 5:
 		if fishType == "BASE":
 			fishType = "GOLD"
 			swimType = "swim_gold"
-			fishValue += 60
+			fishValue = 80
 		elif fishType == "GOLD":
-			fishType = "BIG_GOLDGOLD"
+			fishType = "BIG_GOLD"
 			swimType = "swim_gold"
-			fishValue += 120
+			fishValue = 200
 	elif foodDict.values().min() >= 2:
 		if fishType == "BASE":
 			fishType = "UNICORN"
 			swimType = "swim_uni"
-			fishValue += 80
+			fishValue = 150
 		elif fishType == "UNICORN":
 			fishType = "UBER"
 			swimType = "swim_uber"
-			fishValue += 150
+			fishValue = 300
+		elif fishType == "DIAMOND":
+			fishType = "RAINBOW"
+			swimType = "swim_rain"
+			fishValue = 800
 	elif foodDict['blue'] >= 5:
 		if fishType == "BIG_BASE":
 			fishType = "DIAMOND"
 			swimType = "swim_diam"
-			fishValue += 400
+			fishValue = 500
 	else:
 		if fishType == "BASE":
 			fishType = "MED_BASE"
 			swimType = "swim"
-			fishValue += 20
+			fishValue = 30
 		elif fishType == "MED_BASE":
 			fishType = "BIG_BASE"
 			swimType = "swim"
-			fishValue += 30
+			fishValue = 60
 		else:
 			maxSize = true
