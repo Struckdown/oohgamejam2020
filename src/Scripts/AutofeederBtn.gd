@@ -19,8 +19,9 @@ func _on_AutofeederBtn_pressed():
 		level += 1
 		GameManager.upgradeAutofeeder(feederType)
 		incrementCost()
-		$CheckBox.pressed = true
-		$CheckBox.disabled = false
+		if level == 1:
+			$CheckBox.pressed = true
+			$CheckBox.disabled = false
 		GameManager.updateUI()
 
 func incrementCost():

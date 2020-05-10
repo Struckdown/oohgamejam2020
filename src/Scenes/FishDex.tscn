@@ -579,7 +579,7 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 70 )
 animation = "basefish"
-frame = 1
+frame = 2
 playing = true
 
 [node name="BasicFishBig" type="Control" parent="Master/Content"]
@@ -632,7 +632,7 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 70 )
 animation = "basefish"
-frame = 1
+frame = 2
 playing = true
 
 [node name="DiamondFIsh" type="Control" parent="Master/Content"]
@@ -685,7 +685,6 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 70 )
 animation = "diamond"
-frame = 2
 playing = true
 
 [node name="GoldFishMed" type="Control" parent="Master/Content"]
@@ -738,7 +737,6 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 70 )
 animation = "goldfish"
-frame = 2
 playing = true
 
 [node name="GoldFishBig" type="Control" parent="Master/Content"]
@@ -791,7 +789,7 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 70 )
 animation = "goldfish"
-frame = 1
+frame = 7
 playing = true
 
 [node name="ShadowFish" type="Control" parent="Master/Content"]
@@ -844,7 +842,7 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 70 )
 animation = "shadow"
-frame = 6
+frame = 4
 playing = true
 
 [node name="SkeletonFish" type="Control" parent="Master/Content"]
@@ -897,7 +895,7 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 70 )
 animation = "skele"
-frame = 3
+frame = 1
 playing = true
 
 [node name="UniFish" type="Control" parent="Master/Content"]
@@ -950,7 +948,7 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 70 )
 animation = "unifish"
-frame = 7
+frame = 5
 playing = true
 
 [node name="UberFish" type="Control" parent="Master/Content"]
@@ -1003,7 +1001,7 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 70 )
 animation = "uberfish"
-frame = 4
+frame = 2
 playing = true
 
 [node name="RainbowFish" type="Control" parent="Master/Content"]
@@ -1056,7 +1054,6 @@ position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 70 )
 animation = "rainbow"
-frame = 6
 playing = true
 
 [node name="MysteryFish" type="Control" parent="Master"]
