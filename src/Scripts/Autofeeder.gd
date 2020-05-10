@@ -1,7 +1,7 @@
 extends Area2D
 
 
-var autofeederLevel = 0
+var autofeederLevel = [0,0,0,0]
 var maxDelay = 5
 var delay = maxDelay
 
@@ -9,28 +9,57 @@ var delay = maxDelay
 func _ready():
 	GameManager.autofeeder = self
 
-func levelUp():
-	autofeederLevel += 1
-	delay = float(maxDelay) / float(autofeederLevel)
-	updateSpawnTimer(delay)
+# Takes in int [0,3]
+func levelUp(num):
+	autofeederLevel[num] = autofeederLevel[num] + 1
+	delay = float(maxDelay) / float(autofeederLevel[num])
+	updateSpawnTimer(num, delay)
 
-func updateSpawnTimer(newDelay):
+func updateSpawnTimer(type, newDelay):
+	var timer = getTimer(type)
 	if newDelay > 0:
-		$Timer.wait_time = newDelay
-		$Timer.start()
+		timer.wait_time = newDelay
+		timer.start()
 	else:
-		$Timer.stop()
+		timer.stop()
 
-func spawnPellet(location):
-	GameManager.currency -= 0	# Pink Pellets are free now
+func spawnPellet(type, location):
 	var scene = load("res://Scenes/Pellet.tscn")
 	var pellet = scene.instance()
 	get_parent().add_child(pellet)
+	match type:
+		0:
+			pellet.setPelletType("pink")
+		1:
+			pellet.setPelletType("yellow")
+		2:
+			pellet.setPelletType("green")
+		3:
+			pellet.setPelletType("blue")
 	pellet.global_position = location
 
-func _on_Timer_timeout():
+func _on_Timer_timeout(type):
 	var x = $CollisionShape2D.shape.extents.x * 2
 	var y = $CollisionShape2D.shape.extents.y * 2
 	var pelletX = randi() % int(x)
 	var pelletY = randi() % int(y)
-	spawnPellet(Vector2(pelletX, pelletY))
+	spawnPellet(type, Vector2(pelletX, pelletY))
+
+
+func getTimer(timerNum):
+	var timer
+	match timerNum:
+		0:
+			timer = $TimerPink
+		1:
+			timer = $TimerYellow
+		2:
+			timer = $TimerGreen
+		3:
+			timer = $TimerBlue
+	return timer
+
+# Takes in int from 0-3 representing timer index, and true or false for nowPaused
+func pauseTimer(timerInt, nowPaused):
+	var timer = getTimer(timerInt)
+	timer.paused = nowPaused

@@ -7,7 +7,7 @@
 [ext_resource path="res://Art/HUD Elements/More Fish.png" type="Texture" id=5]
 [ext_resource path="res://Audio/button.wav" type="AudioStream" id=6]
 [ext_resource path="res://Art/HUD Elements/money.png" type="Texture" id=7]
-[ext_resource path="res://Art/HUD Elements/buy autofeeder (0).png" type="Texture" id=8]
+[ext_resource path="res://Art/HUD Elements/Dex.png" type="Texture" id=8]
 [ext_resource path="res://Audio/buyfish.wav" type="AudioStream" id=9]
 [ext_resource path="res://Art/HUD Elements/blue pellet.png" type="Texture" id=10]
 [ext_resource path="res://Art/HUD Elements/pink pellet.png" type="Texture" id=11]
@@ -27,6 +27,70 @@ mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
+}
+
+[node name="Tabs" type="Tabs" parent="."]
+anchor_right = 0.028
+anchor_bottom = 0.363
+margin_left = 841.0
+margin_top = -13.0
+margin_right = 841.328
+margin_bottom = 381.2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tabs"]
+anchor_left = -0.483
+anchor_top = 0.028
+anchor_right = 0.897
+anchor_bottom = 1.0
+margin_left = 12.007
+margin_top = 596.864
+margin_right = 573.987
+margin_bottom = 35.0
+rect_rotation = -90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Autofeed" type="Button" parent="Tabs/HBoxContainer"]
+margin_right = 147.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+text = "Autofeeders"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Plants" type="Button" parent="Tabs/HBoxContainer"]
+margin_left = 151.0
+margin_right = 298.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+text = "Decor"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pellets" type="Button" parent="Tabs/HBoxContainer"]
+margin_left = 302.0
+margin_right = 449.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+text = "Pellets"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Main" type="Button" parent="Tabs/HBoxContainer"]
+margin_left = 453.0
+margin_right = 602.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+text = "Store"
+__meta__ = {
+"_edit_lock_": true
 }
 
 [node name="Background" type="Panel" parent="."]
@@ -76,70 +140,6 @@ stream = ExtResource( 6 )
 [node name="BuyFishSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 
-[node name="Tabs" type="Tabs" parent="."]
-anchor_right = 0.028
-anchor_bottom = 0.363
-margin_left = 841.0
-margin_top = -13.0
-margin_right = 841.328
-margin_bottom = 381.2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Tabs"]
-anchor_left = -0.483
-anchor_top = 0.028
-anchor_right = 0.897
-anchor_bottom = 1.0
-margin_left = 12.007
-margin_top = 594.864
-margin_right = 571.987
-margin_bottom = 33.0
-rect_rotation = -90.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Autofeed" type="Button" parent="Tabs/HBoxContainer"]
-margin_right = 147.0
-margin_bottom = 33.0
-size_flags_horizontal = 3
-text = "Autofeeders"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Plants" type="Button" parent="Tabs/HBoxContainer"]
-margin_left = 151.0
-margin_right = 298.0
-margin_bottom = 33.0
-size_flags_horizontal = 3
-text = "Decor"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Pellets" type="Button" parent="Tabs/HBoxContainer"]
-margin_left = 302.0
-margin_right = 449.0
-margin_bottom = 33.0
-size_flags_horizontal = 3
-text = "Pellets"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Main" type="Button" parent="Tabs/HBoxContainer"]
-margin_left = 453.0
-margin_right = 600.0
-margin_bottom = 33.0
-size_flags_horizontal = 3
-text = "Store"
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="Content" type="Control" parent="."]
 margin_left = 868.425
 margin_right = 908.425
@@ -182,8 +182,8 @@ __meta__ = {
 [node name="BuyFishLabel" type="Label" parent="Content/MainShopUI/VBoxContainer/BuyFish"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 98.3042
-margin_bottom = 10.3042
+margin_top = 98.0598
+margin_bottom = 10.0598
 text = "Fish"
 align = 1
 __meta__ = {
@@ -193,8 +193,8 @@ __meta__ = {
 [node name="BuyFishCostLbl" type="Label" parent="Content/MainShopUI/VBoxContainer/BuyFish"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 112.965
-margin_bottom = 24.9654
+margin_top = 112.721
+margin_bottom = 24.7209
 text = "$10"
 align = 1
 __meta__ = {
@@ -218,16 +218,16 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -1.0
-margin_top = 98.1372
+margin_top = 95.7977
 margin_right = -1.0
-margin_bottom = 15.1372
+margin_bottom = 12.7977
 text = "Sell"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AutofeederBtn" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
+[node name="FishDex" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
 margin_top = 284.0
 margin_right = 153.0
 margin_bottom = 422.0
@@ -240,23 +240,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AutoFeederLbl" type="Label" parent="Content/MainShopUI/VBoxContainer/AutofeederBtn"]
+[node name="FishDexLbl" type="Label" parent="Content/MainShopUI/VBoxContainer/FishDex"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 94.1502
-margin_bottom = 8.15021
-text = "Autofeed"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AutoFeederCostLbl2" type="Label" parent="Content/MainShopUI/VBoxContainer/AutofeederBtn"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 107.15
-margin_bottom = 23.1502
-text = "$10"
+margin_left = -1.0
+margin_top = 115.0
+margin_right = -1.0
+margin_bottom = -2.0
+text = "FishDex"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -617,12 +608,14 @@ __meta__ = {
 margin_right = 153.0
 margin_bottom = 102.0
 size_flags_vertical = 3
+initialCost = 10
 
 [node name="AutofeederBtn2" parent="Content/AutofeederShopUI/VBoxContainer" instance=ExtResource( 20 )]
 margin_top = 106.0
 margin_right = 153.0
 margin_bottom = 208.0
 size_flags_vertical = 3
+initialCost = 15
 feederType = 1
 
 [node name="AutofeederBtn3" parent="Content/AutofeederShopUI/VBoxContainer" instance=ExtResource( 20 )]
@@ -630,6 +623,7 @@ margin_top = 212.0
 margin_right = 153.0
 margin_bottom = 314.0
 size_flags_vertical = 3
+initialCost = 25
 feederType = 2
 
 [node name="AutofeederBtn4" parent="Content/AutofeederShopUI/VBoxContainer" instance=ExtResource( 20 )]
@@ -637,6 +631,7 @@ margin_top = 318.0
 margin_right = 153.0
 margin_bottom = 422.0
 size_flags_vertical = 3
+initialCost = 30
 feederType = 3
 [connection signal="pressed" from="Tabs/HBoxContainer/Autofeed" to="." method="_on_Autofeeder_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/Plants" to="." method="_on_Plants_pressed"]
@@ -644,7 +639,7 @@ feederType = 3
 [connection signal="pressed" from="Tabs/HBoxContainer/Main" to="." method="_on_Main_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/BuyFish" to="." method="_on_BuyFish_pressed"]
 [connection signal="pressed" from="Content/MainShopUI/VBoxContainer/SellButton" to="." method="_on_SellButton_pressed"]
-[connection signal="pressed" from="Content/MainShopUI/VBoxContainer/AutofeederBtn" to="." method="_on_AutofeederBtn_pressed"]
+[connection signal="pressed" from="Content/MainShopUI/VBoxContainer/FishDex" to="." method="_on_FishDex_pressed"]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet1" to="." method="_on_Pellet_pressed" binds= [ "pink" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet2" to="." method="_on_Pellet_pressed" binds= [ "yellow" ]]
 [connection signal="pressed" from="Content/PelletShopUI/VBoxContainer/Pellet3" to="." method="_on_Pellet_pressed" binds= [ "green" ]]

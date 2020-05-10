@@ -2,14 +2,14 @@ extends Control
 
 export(NodePath) var mouseManagerRef
 export(NodePath) var decorationManagerRef
+export(NodePath) var fishDexRef
 var autofeedCost = 10
-onready var autofeedLbl = $Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederLbl
-onready var autofeedCostLbl = $Content/MainShopUI/VBoxContainer/AutofeederBtn/AutoFeederCostLbl2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	mouseManagerRef = get_node(mouseManagerRef)
 	decorationManagerRef = get_node(decorationManagerRef)
+	fishDexRef = get_node(fishDexRef)
 	GameManager.storeUI = self
 	updateUI()
 
@@ -23,11 +23,6 @@ func updateUI():
 	$Content/DecorationShopUI/VBoxContainer/DelayDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("delay"))
 	$Content/DecorationShopUI/VBoxContainer/BulkDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("bulk"))
 	$Content/DecorationShopUI/VBoxContainer/MultiplierDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("multiplier"))
-	if GameManager.autofeeder != null:
-		autofeedCost = GameManager.autofeeder.autofeederLevel * 10
-		if $Content/MainShopUI.visible:
-			autofeedLbl.text = "Autofeed " + str(GameManager.autofeeder.autofeederLevel)
-			autofeedCostLbl.text = "$" + str(autofeedCost)
 	$Content/MainShopUI/VBoxContainer/BuyFish/BuyFishCostLbl.text = "$"+str(getFishCost())
 
 func getFishCost():
@@ -103,7 +98,13 @@ func _on_Plant_pressed(type):
 
 # Win the game
 func _on_Plant4_pressed():
-	pass # Replace with function body.
+	if GameManager.currency >= 10000:
+		GameManager.currency -= 10000
+		get_tree().change_scene("res://Scenes/winGameScreen.tscn")
 
 
 
+
+
+func _on_FishDex_pressed():
+	fishDexRef.toggleVis()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Fish.tscn" type="PackedScene" id=2]
@@ -8,13 +8,15 @@
 [ext_resource path="res://Scenes/Autofeeder.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/Decorations/castle.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/DecorationManager.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/FishDex.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/BubbleSpawner.tscn" type="PackedScene" id=10]
 
 [node name="World" type="Node"]
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 512, 300 )
+position = Vector2( 512, 302.105 )
+scale = Vector2( 1, 1.00702 )
 texture = ExtResource( 5 )
 
 [node name="Fish" parent="." instance=ExtResource( 2 )]
@@ -25,13 +27,15 @@ position = Vector2( 93, 316 )
 [node name="DecorationManager" parent="." instance=ExtResource( 8 )]
 
 [node name="StoreUI" parent="." instance=ExtResource( 4 )]
+margin_bottom = 4.0
 mouseManagerRef = NodePath("../MouseManager")
 decorationManagerRef = NodePath("../DecorationManager")
+fishDexRef = NodePath("../FishDex")
 
 [node name="Autofeeder" parent="." instance=ExtResource( 6 )]
 position = Vector2( 33.8806, 9.24018 )
 
-[node name="CollisionShape2D" parent="Autofeeder" index="1"]
+[node name="CollisionShape2D" parent="Autofeeder" index="4"]
 position = Vector2( 401.593, 18.5708 )
 
 [node name="Castle" type="Sprite" parent="."]
@@ -41,6 +45,15 @@ texture = ExtResource( 7 )
 
 [node name="BubbleSpawner" parent="." instance=ExtResource( 10 )]
 position = Vector2( 425.526, 616.129 )
+
+[node name="FishDex" parent="." instance=ExtResource( 9 )]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -26.4511
+margin_top = 15.1995
+margin_right = -692.451
+margin_bottom = -296.8
 
 [editable path="Autofeeder"]
 
