@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Art/Basic Fish/Fish.png" type="Texture" id=1]
 [ext_resource path="res://Art/HUD Elements/right arrow.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Art/HUD Elements/fish sillouete.png" type="Texture" id=11]
 [ext_resource path="res://Art/Diafish/Diafish.png" type="Texture" id=12]
 [ext_resource path="res://Art/Rainbow Fish/Rainbowfish.png" type="Texture" id=13]
+[ext_resource path="res://Audio/button.wav" type="AudioStream" id=14]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -698,7 +699,6 @@ scale = Vector2( 2, 2 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "diamond"
-frame = 7
 playing = true
 
 [node name="GoldFishMed" type="Control" parent="Master/Node2D/Content"]
@@ -752,7 +752,6 @@ scale = Vector2( 1.5, 1.5 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "goldfish"
-frame = 7
 playing = true
 
 [node name="GoldFishBig" type="Control" parent="Master/Node2D/Content"]
@@ -806,7 +805,7 @@ scale = Vector2( 2, 2 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "goldfish"
-frame = 5
+frame = 6
 playing = true
 
 [node name="ShadowFish" type="Control" parent="Master/Node2D/Content"]
@@ -860,7 +859,7 @@ scale = Vector2( 1.5, 1.5 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "shadow"
-frame = 3
+frame = 4
 playing = true
 
 [node name="SkeletonFish" type="Control" parent="Master/Node2D/Content"]
@@ -914,6 +913,7 @@ scale = Vector2( 2, 2 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "skele"
+frame = 1
 playing = true
 
 [node name="UniFish" type="Control" parent="Master/Node2D/Content"]
@@ -967,7 +967,7 @@ scale = Vector2( 1.5, 1.5 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "unifish"
-frame = 4
+frame = 5
 playing = true
 
 [node name="UberFish" type="Control" parent="Master/Node2D/Content"]
@@ -1021,7 +1021,7 @@ scale = Vector2( 2, 2 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "uberfish"
-frame = 1
+frame = 2
 playing = true
 
 [node name="RainbowFish" type="Control" parent="Master/Node2D/Content"]
@@ -1075,7 +1075,7 @@ scale = Vector2( 2, 2 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "rainbow"
-frame = 1
+frame = 2
 playing = true
 
 [node name="MysteryFish" type="Control" parent="Master/Node2D"]
@@ -1128,5 +1128,8 @@ __meta__ = {
 position = Vector2( 367.702, 171.144 )
 z_index = 1
 texture = ExtResource( 11 )
+
+[node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
 [connection signal="pressed" from="Master/Node2D/ForwardButton" to="." method="_on_ForwardButton_pressed"]
 [connection signal="pressed" from="Master/Node2D/BackwardsButton" to="." method="_on_BackwardsButton_pressed"]

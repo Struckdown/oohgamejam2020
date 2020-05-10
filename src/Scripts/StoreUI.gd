@@ -31,12 +31,12 @@ func getFishCost():
 
 func _on_FeedButton_pressed():
 	mouseManagerRef.setMouseState("feed")
-	$AudioStreamPlayer.play()
+	$ButtonSFX.play()
 
 
 func _on_SellButton_pressed():
 	mouseManagerRef.setMouseState("sell")
-	$AudioStreamPlayer.play()
+	$ButtonSFX.play()
 
 
 func _on_BuyFish_pressed():
@@ -86,6 +86,7 @@ func _on_Autofeeder_pressed():
 func _on_Pellet_pressed(type):
 	mouseManagerRef.activePelletType = type
 	mouseManagerRef.setMouseState("feed")
+	$ButtonSFX.play()
 
 
 # Type is one of delay, bulk, multiplier
@@ -95,6 +96,7 @@ func _on_Plant_pressed(type):
 			GameManager.currency -= decorationManagerRef.getDecorCost(type)
 			decorationManagerRef.levelup(type)
 			updateUI()
+	$ButtonSFX.play()
 
 
 # Win the game
@@ -104,8 +106,6 @@ func _on_Plant4_pressed():
 		get_tree().change_scene("res://Scenes/winGameScreen.tscn")
 
 
-
-
-
 func _on_FishDex_pressed():
 	fishDexRef.toggleVis()
+	$ButtonSFX.play()

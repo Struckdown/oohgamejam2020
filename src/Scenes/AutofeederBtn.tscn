@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Art/HUD Elements/buy autofeeder (0).png" type="Texture" id=1]
 [ext_resource path="res://Scripts/AutofeederBtn.gd" type="Script" id=2]
+[ext_resource path="res://Audio/button.wav" type="AudioStream" id=3]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -72,5 +73,8 @@ text = "On"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 [connection signal="pressed" from="AutofeederBtn" to="." method="_on_AutofeederBtn_pressed"]
 [connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]

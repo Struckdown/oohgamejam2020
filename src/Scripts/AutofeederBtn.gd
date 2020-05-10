@@ -23,6 +23,7 @@ func _on_AutofeederBtn_pressed():
 			$CheckBox.pressed = true
 			$CheckBox.disabled = false
 		GameManager.updateUI()
+	$ButtonSFX.play()
 
 func incrementCost():
 	print(currentCost)

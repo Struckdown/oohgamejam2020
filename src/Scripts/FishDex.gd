@@ -26,6 +26,7 @@ func toggleVis():
 func changePage(newPage):
 	if newPage >= 0 and newPage < len(pages):
 		currentPage = newPage
+		$ButtonSFX.play()
 	for p in pages:
 		p.hide()
 	if unlocked[currentPage]:
