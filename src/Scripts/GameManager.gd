@@ -51,6 +51,11 @@ func requestSellFish(fish):
 func sellFish(fish):
 	currency += (fish.fishValue * decorationManager.incomeMultiplier)
 	fishArray.erase(fish)
+	var scene = load("res://Scenes/SellingAnim.tscn")
+	var anim = scene.instance()
+	add_child(anim)
+	anim.global_position = fish.global_position
+	print(anim.global_position)
 	fish.queue_free()
 	updateUI()
 
