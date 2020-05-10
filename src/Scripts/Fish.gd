@@ -191,12 +191,11 @@ func evolve_type_check():
 			swimType = "swim_rain"
 			fishValue = 800
 			evoReach = true
-	elif foodDict['blue'] >= 5:
-		if fishType == "BIG_BASE":
-			fishType = "DIAMOND"
-			swimType = "swim_diam"
-			fishValue = 500
-			evoReach = true
+	elif foodDict['blue'] >= 5 and fishType == "BIG_BASE":
+		fishType = "DIAMOND"
+		swimType = "swim_diam"
+		fishValue = 500
+		evoReach = true
 	else:
 		if fishType == "BASE":
 			fishType = "MED_BASE"
