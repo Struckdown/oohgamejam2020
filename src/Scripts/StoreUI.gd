@@ -11,7 +11,6 @@ func _ready():
 	mouseManagerRef = get_node(mouseManagerRef)
 	decorationManagerRef = get_node(decorationManagerRef)
 	GameManager.storeUI = self
-	get_parent().get_node("MouseManager")
 	updateUI()
 
 
@@ -47,7 +46,7 @@ func _on_BuyFish_pressed():
 
 
 func _on_AutofeederBtn_pressed():
-	if GameManager.currency > autofeedCost:
+	if GameManager.currency >= autofeedCost:
 		GameManager.autofeeder.levelUp()
 		GameManager.currency -= autofeedCost
 		updateUI()
