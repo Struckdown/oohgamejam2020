@@ -536,7 +536,7 @@ position = Vector2( 331.721, 164.916 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "basefish"
-frame = 3
+frame = 5
 playing = true
 
 [node name="BasicFishMed" type="Control" parent="Master/Node2D/Content"]
@@ -590,6 +590,7 @@ scale = Vector2( 1.5, 1.5 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "basefish"
+frame = 2
 playing = true
 
 [node name="BasicFishBig" type="Control" parent="Master/Node2D/Content"]
@@ -643,7 +644,7 @@ scale = Vector2( 2, 2 )
 z_index = 1
 frames = SubResource( 71 )
 animation = "basefish"
-frame = 6
+frame = 1
 playing = true
 
 [node name="DiamondFIsh" type="Control" parent="Master/Node2D/Content"]

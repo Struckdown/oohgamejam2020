@@ -30,12 +30,12 @@ __meta__ = {
 }
 
 [node name="Tabs" type="Tabs" parent="."]
-anchor_right = 0.028
-anchor_bottom = 0.363
-margin_left = 841.0
+anchor_left = 0.821
+anchor_right = 0.821
+margin_left = 0.295959
 margin_top = -13.0
-margin_right = 841.328
-margin_bottom = 381.2
+margin_right = 29.296
+margin_bottom = 599.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -141,28 +141,30 @@ stream = ExtResource( 6 )
 stream = ExtResource( 9 )
 
 [node name="Content" type="Control" parent="."]
-margin_left = 868.425
-margin_right = 908.425
+anchor_left = 0.848
+anchor_right = 0.848
+margin_left = 0.072937
+margin_right = 40.0729
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MainShopUI" type="Control" parent="Content"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 3.854
+anchor_bottom = 14.966
 margin_left = 4.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_right = 3.84
+margin_bottom = -167.64
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Content/MainShopUI"]
-anchor_right = 4.812
-anchor_bottom = 11.722
-margin_right = 0.0159912
-margin_bottom = 0.00799561
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+margin_bottom = -8.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -230,7 +232,7 @@ __meta__ = {
 [node name="FishDex" type="TextureButton" parent="Content/MainShopUI/VBoxContainer"]
 margin_top = 284.0
 margin_right = 153.0
-margin_bottom = 422.0
+margin_bottom = 423.0
 size_flags_vertical = 3
 texture_normal = ExtResource( 8 )
 texture_pressed = SubResource( 1 )

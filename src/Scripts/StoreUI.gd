@@ -20,9 +20,10 @@ func _ready():
 
 func updateUI():
 	$Background/Currency.text = str(GameManager.currency)
-	$Content/DecorationShopUI/VBoxContainer/DelayDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("delay"))
-	$Content/DecorationShopUI/VBoxContainer/BulkDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("bulk"))
-	$Content/DecorationShopUI/VBoxContainer/MultiplierDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("multiplier"))
+	if decorationManagerRef:
+		$Content/DecorationShopUI/VBoxContainer/DelayDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("delay"))
+		$Content/DecorationShopUI/VBoxContainer/BulkDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("bulk"))
+		$Content/DecorationShopUI/VBoxContainer/MultiplierDecor/Cost.text = "$"+str(decorationManagerRef.getDecorCost("multiplier"))
 	$Content/MainShopUI/VBoxContainer/BuyFish/BuyFishCostLbl.text = "$"+str(getFishCost())
 
 func getFishCost():
