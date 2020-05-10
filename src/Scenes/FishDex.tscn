@@ -51,237 +51,237 @@ region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 13 )
+atlas = ExtResource( 7 )
 region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 12 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 12 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 12 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 12 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 12 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 12 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 12 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 0, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 64, 0, 64, 32 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 128, 0, 64, 32 )
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 192, 0, 64, 32 )
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 256, 0, 64, 32 )
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 320, 0, 64, 32 )
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 384, 0, 64, 32 )
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 448, 0, 64, 32 )
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
-atlas = ExtResource( 7 )
+atlas = ExtResource( 6 )
 region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=41]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=42]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=43]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=44]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=45]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=46]
 flags = 4
-atlas = ExtResource( 12 )
+atlas = ExtResource( 10 )
 region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=47]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=48]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=49]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=50]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=51]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=52]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=53]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=54]
 flags = 4
-atlas = ExtResource( 6 )
+atlas = ExtResource( 9 )
 region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=55]
@@ -326,42 +326,42 @@ region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=63]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=64]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=65]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=66]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=67]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=68]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=69]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=70]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="SpriteFrames" id=71]
@@ -373,32 +373,32 @@ animations = [ {
 }, {
 "frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
-"name": "rainbow",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
-"loop": true,
-"name": "basefish",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
-"loop": true,
-"name": "skele",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
-"loop": true,
 "name": "uberfish",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
 "loop": true,
 "name": "diamond",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ) ],
+"frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "basefish",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
 "loop": true,
 "name": "unifish",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
+"loop": true,
+"name": "skele",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ) ],
+"loop": true,
+"name": "shadow",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ) ],
@@ -408,7 +408,7 @@ animations = [ {
 }, {
 "frames": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
 "loop": true,
-"name": "shadow",
+"name": "rainbow",
 "speed": 5.0
 } ]
 
@@ -431,36 +431,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Book" type="Sprite" parent="Master"]
+[node name="Node2D" type="Node2D" parent="Master"]
+z_index = 1
+
+[node name="Book" type="Sprite" parent="Master/Node2D"]
 position = Vector2( 257.41, 182.101 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 
-[node name="ForwardButton" type="TextureButton" parent="Master"]
+[node name="ForwardButton" type="TextureButton" parent="Master/Node2D"]
 anchor_right = 1.0
 anchor_bottom = 0.979
 margin_left = 405.0
 margin_top = 272.0
-margin_right = -76.0
-margin_bottom = -52.356
+margin_right = 437.0
+margin_bottom = 304.0
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackwardsButton" type="TextureButton" parent="Master"]
+[node name="BackwardsButton" type="TextureButton" parent="Master/Node2D"]
 anchor_right = 1.0
 anchor_bottom = 0.961
 margin_left = 66.0
 margin_top = 270.0
-margin_right = -412.0
-margin_bottom = -47.804
+margin_right = 98.0
+margin_bottom = 302.0
 texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PageNum" type="Label" parent="Master"]
+[node name="PageNum" type="Label" parent="Master/Node2D"]
 margin_left = 370.642
 margin_top = 307.192
 margin_right = 410.642
@@ -470,21 +473,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Content" type="Control" parent="Master"]
+[node name="Content" type="Control" parent="Master/Node2D"]
 anchor_left = 0.004
 anchor_top = 0.007
 anchor_right = 0.5
 anchor_bottom = 0.615
-margin_left = -0.052
-margin_top = -3.548
-margin_right = 256.5
-margin_bottom = 139.14
+margin_left = 2.0
+margin_top = -1.0
+margin_right = 504.0
+margin_bottom = 356.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BasicFish" type="Control" parent="Master/Content"]
+[node name="BasicFish" type="Control" parent="Master/Node2D/Content"]
 anchor_left = 0.105
 anchor_top = 0.012
 anchor_right = 0.931
@@ -498,7 +501,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/BasicFish"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/BasicFish"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -512,7 +515,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/BasicFish"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/BasicFish"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -528,13 +531,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFish"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/BasicFish"]
 position = Vector2( 331.721, 164.916 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "basefish"
+frame = 3
 playing = true
 
-[node name="BasicFishMed" type="Control" parent="Master/Content"]
+[node name="BasicFishMed" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -549,7 +554,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/BasicFishMed"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/BasicFishMed"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -563,7 +568,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/BasicFishMed"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/BasicFishMed"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -579,15 +584,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFishMed"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/BasicFishMed"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "basefish"
-frame = 4
 playing = true
 
-[node name="BasicFishBig" type="Control" parent="Master/Content"]
+[node name="BasicFishBig" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -602,7 +607,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/BasicFishBig"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/BasicFishBig"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -616,7 +621,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/BasicFishBig"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/BasicFishBig"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -632,15 +637,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFishBig"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/BasicFishBig"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "basefish"
-frame = 3
+frame = 6
 playing = true
 
-[node name="DiamondFIsh" type="Control" parent="Master/Content"]
+[node name="DiamondFIsh" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -655,7 +661,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/DiamondFIsh"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/DiamondFIsh"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -669,7 +675,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/DiamondFIsh"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/DiamondFIsh"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -685,15 +691,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/DiamondFIsh"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/DiamondFIsh"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "diamond"
-frame = 1
+frame = 7
 playing = true
 
-[node name="GoldFishMed" type="Control" parent="Master/Content"]
+[node name="GoldFishMed" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -708,7 +715,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/GoldFishMed"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/GoldFishMed"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -722,7 +729,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/GoldFishMed"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/GoldFishMed"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -738,15 +745,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/GoldFishMed"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/GoldFishMed"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "goldfish"
-frame = 1
+frame = 7
 playing = true
 
-[node name="GoldFishBig" type="Control" parent="Master/Content"]
+[node name="GoldFishBig" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -761,7 +769,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/GoldFishBig"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/GoldFishBig"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -775,7 +783,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/GoldFishBig"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/GoldFishBig"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -791,15 +799,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/GoldFishBig"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/GoldFishBig"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "goldfish"
-frame = 7
+frame = 5
 playing = true
 
-[node name="ShadowFish" type="Control" parent="Master/Content"]
+[node name="ShadowFish" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -814,7 +823,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/ShadowFish"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/ShadowFish"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -828,7 +837,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/ShadowFish"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/ShadowFish"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -844,15 +853,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/ShadowFish"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/ShadowFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "shadow"
-frame = 5
+frame = 3
 playing = true
 
-[node name="SkeletonFish" type="Control" parent="Master/Content"]
+[node name="SkeletonFish" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -867,7 +877,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/SkeletonFish"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/SkeletonFish"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -881,7 +891,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/SkeletonFish"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/SkeletonFish"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -897,15 +907,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/SkeletonFish"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/SkeletonFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "skele"
-frame = 2
 playing = true
 
-[node name="UniFish" type="Control" parent="Master/Content"]
+[node name="UniFish" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -920,7 +930,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/UniFish"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/UniFish"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -934,7 +944,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/UniFish"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/UniFish"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -950,15 +960,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/UniFish"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/UniFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "unifish"
-frame = 6
+frame = 4
 playing = true
 
-[node name="UberFish" type="Control" parent="Master/Content"]
+[node name="UberFish" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -973,7 +984,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/UberFish"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/UberFish"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -987,7 +998,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/UberFish"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/UberFish"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -1003,15 +1014,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/UberFish"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/UberFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "uberfish"
-frame = 3
+frame = 1
 playing = true
 
-[node name="RainbowFish" type="Control" parent="Master/Content"]
+[node name="RainbowFish" type="Control" parent="Master/Node2D/Content"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
@@ -1026,7 +1038,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/Content/RainbowFish"]
+[node name="FishName" type="Label" parent="Master/Node2D/Content/RainbowFish"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -1040,7 +1052,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/Content/RainbowFish"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/Content/RainbowFish"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -1056,30 +1068,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/RainbowFish"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Node2D/Content/RainbowFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
+z_index = 1
 frames = SubResource( 71 )
 animation = "rainbow"
-frame = 3
+frame = 1
 playing = true
 
-[node name="MysteryFish" type="Control" parent="Master"]
+[node name="MysteryFish" type="Control" parent="Master/Node2D"]
 visible = false
 anchor_left = 0.105
 anchor_top = 0.012
 anchor_right = 0.931
 anchor_bottom = 0.924
-margin_left = 1.95501
-margin_top = -0.871998
-margin_right = 2.05295
-margin_bottom = -1.14404
+margin_left = 18.0
+margin_top = -3.0
+margin_right = 512.0
+margin_bottom = 362.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishName" type="Label" parent="Master/MysteryFish"]
+[node name="FishName" type="Label" parent="Master/Node2D/MysteryFish"]
 anchor_top = 0.044
 anchor_right = 0.916
 anchor_bottom = 1.0
@@ -1094,7 +1107,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FishDescription" type="Label" parent="Master/MysteryFish"]
+[node name="FishDescription" type="Label" parent="Master/Node2D/MysteryFish"]
 anchor_top = 0.046
 anchor_right = 0.908
 anchor_bottom = 1.0
@@ -1110,8 +1123,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MissingFish" type="Sprite" parent="Master/MysteryFish"]
-position = Vector2( 324.215, 154.757 )
+[node name="MissingFish" type="Sprite" parent="Master/Node2D/MysteryFish"]
+position = Vector2( 367.702, 171.144 )
+z_index = 1
 texture = ExtResource( 11 )
-[connection signal="pressed" from="Master/ForwardButton" to="." method="_on_ForwardButton_pressed"]
-[connection signal="pressed" from="Master/BackwardsButton" to="." method="_on_BackwardsButton_pressed"]
+[connection signal="pressed" from="Master/Node2D/ForwardButton" to="." method="_on_ForwardButton_pressed"]
+[connection signal="pressed" from="Master/Node2D/BackwardsButton" to="." method="_on_BackwardsButton_pressed"]
