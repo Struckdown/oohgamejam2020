@@ -97,7 +97,7 @@ func end_chase(food):
 	chase_flag = 0
 	$EatSFX.play(0)
 	evolution_score += 1
-	if evolution_score == 5:
+	if evolution_score == 8:
 		evolve()
 		
 		
@@ -142,7 +142,7 @@ func evolve_fx():
 	self.apply_scale(Vector2(1.5,1.5))
 
 func evolve_type_check():
-	if foodDict["green"] == 5:
+	if foodDict["green"] >= 5:
 		if fishType == "BASE":
 			fishType = "SKELETON"
 			swimType = "swim_skel"
@@ -151,7 +151,7 @@ func evolve_type_check():
 			fishType = "SHADOW"
 			swimType = "swim_shad"
 			fishValue += 60
-	elif foodDict['yellow'] == 5:
+	elif foodDict['yellow'] >= 5:
 		if fishType == "BASE":
 			fishType = "GOLD"
 			swimType = "swim_gold"
@@ -160,7 +160,7 @@ func evolve_type_check():
 			fishType = "BIG_GOLDGOLD"
 			swimType = "swim_gold"
 			fishValue += 120
-	elif foodDict.values().min() >= 1:
+	elif foodDict.values().min() >= 2:
 		if fishType == "BASE":
 			fishType = "UNICORN"
 			swimType = "swim_uni"
@@ -169,7 +169,7 @@ func evolve_type_check():
 			fishType = "UBER"
 			swimType = "swim_uber"
 			fishValue += 150
-	elif foodDict['blue'] == 5:
+	elif foodDict['blue'] >= 5:
 		if fishType == "BIG_BASE":
 			fishType = "DIAMOND"
 			swimType = "swim_diam"
