@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Art/Basic Fish/Fish.png" type="Texture" id=1]
 [ext_resource path="res://Art/HUD Elements/right arrow.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Art/Skelefish/Skelefish.png" type="Texture" id=10]
 [ext_resource path="res://Art/HUD Elements/fish sillouete.png" type="Texture" id=11]
 [ext_resource path="res://Art/Diafish/Diafish.png" type="Texture" id=12]
+[ext_resource path="res://Art/Rainbow Fish/Rainbowfish.png" type="Texture" id=13]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -50,315 +51,320 @@ region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
-atlas = ExtResource( 9 )
+atlas = ExtResource( 13 )
 region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 4
 atlas = ExtResource( 10 )
-region = Rect2( 448, 0, 64, 32 )
+region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 64, 32 )
+atlas = ExtResource( 10 )
+region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 64, 0, 64, 32 )
+atlas = ExtResource( 10 )
+region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 128, 0, 64, 32 )
+atlas = ExtResource( 10 )
+region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 192, 0, 64, 32 )
+atlas = ExtResource( 10 )
+region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 256, 0, 64, 32 )
+atlas = ExtResource( 10 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 320, 0, 64, 32 )
+atlas = ExtResource( 10 )
+region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 384, 0, 64, 32 )
+atlas = ExtResource( 10 )
+region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 448, 0, 64, 32 )
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 64, 32 )
+region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 7 )
-region = Rect2( 64, 0, 64, 32 )
+region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 7 )
-region = Rect2( 128, 0, 64, 32 )
+region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 7 )
-region = Rect2( 192, 0, 64, 32 )
+region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 7 )
-region = Rect2( 256, 0, 64, 32 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
 atlas = ExtResource( 7 )
-region = Rect2( 320, 0, 64, 32 )
+region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
 atlas = ExtResource( 7 )
-region = Rect2( 384, 0, 64, 32 )
+region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 4
-atlas = ExtResource( 7 )
-region = Rect2( 448, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=41]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 64, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=42]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 128, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=43]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 192, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=44]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 256, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=45]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 320, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=46]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 384, 0, 64, 32 )
+atlas = ExtResource( 12 )
+region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=47]
 flags = 4
-atlas = ExtResource( 8 )
-region = Rect2( 448, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=48]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 0, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=49]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 64, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=50]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 128, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=51]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 192, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=52]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 256, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=53]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 320, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=54]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 384, 0, 64, 32 )
+atlas = ExtResource( 6 )
+region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=55]
 flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 448, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=56]
 flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=57]
 flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 64, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=58]
 flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 128, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=59]
 flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=60]
 flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 256, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=61]
 flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 320, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 384, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=62]
 flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 384, 0, 64, 32 )
+atlas = ExtResource( 8 )
+region = Rect2( 448, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=63]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=64]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 9 )
 region = Rect2( 64, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=65]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 9 )
 region = Rect2( 128, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=66]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 9 )
 region = Rect2( 192, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=67]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 9 )
 region = Rect2( 256, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=68]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 9 )
 region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=69]
 flags = 4
-atlas = ExtResource( 1 )
+atlas = ExtResource( 9 )
 region = Rect2( 384, 0, 64, 32 )
 
-[sub_resource type="SpriteFrames" id=70]
+[sub_resource type="AtlasTexture" id=70]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 448, 0, 64, 32 )
+
+[sub_resource type="SpriteFrames" id=71]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": true,
@@ -367,42 +373,42 @@ animations = [ {
 }, {
 "frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
-"name": "shadow",
+"name": "rainbow",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
-"loop": true,
-"name": "skele",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
-"loop": true,
-"name": "unifish",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
-"loop": true,
-"name": "uberfish",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
-"loop": true,
-"name": "goldfish",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ) ],
-"loop": true,
-"name": "diamond",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ) ],
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
 "name": "basefish",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
 "loop": true,
-"name": "rainbow",
+"name": "skele",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"loop": true,
+"name": "uberfish",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
+"loop": true,
+"name": "diamond",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ) ],
+"loop": true,
+"name": "unifish",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ) ],
+"loop": true,
+"name": "goldfish",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
+"loop": true,
+"name": "shadow",
 "speed": 5.0
 } ]
 
@@ -514,7 +520,7 @@ margin_left = -11.0
 margin_top = 7.78394
 margin_right = -207.593
 margin_bottom = -57.784
-text = "Super basic fish"
+text = "The simplest of fish. Small, lovable and adorable. Filled with potential to become any fish!"
 align = 1
 valign = 1
 autowrap = true
@@ -524,9 +530,8 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFish"]
 position = Vector2( 331.721, 164.916 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "basefish"
-frame = 3
 playing = true
 
 [node name="BasicFishMed" type="Control" parent="Master/Content"]
@@ -566,7 +571,7 @@ margin_left = -11.0
 margin_top = 7.78394
 margin_right = -207.593
 margin_bottom = -57.784
-text = "Super basic fish, but big"
+text = "When a little fish eats a lot of food, it stops being a little fish and becomes a medium fish."
 align = 1
 valign = 1
 autowrap = true
@@ -577,8 +582,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFishMed"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "basefish"
+frame = 4
 playing = true
 
 [node name="BasicFishBig" type="Control" parent="Master/Content"]
@@ -618,7 +624,7 @@ margin_left = -11.0
 margin_top = 7.78394
 margin_right = -184.593
 margin_bottom = -57.784
-text = "Super basic fish. But really big. Like, max big."
+text = "Once a fish has eaten enough without any special diet, it becomes a large fish. Notes indicate that this fish reacts oddly to a large amount of blue pellets."
 align = 1
 valign = 1
 autowrap = true
@@ -629,9 +635,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/BasicFishBig"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "basefish"
-frame = 6
+frame = 3
 playing = true
 
 [node name="DiamondFIsh" type="Control" parent="Master/Content"]
@@ -682,9 +688,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/DiamondFIsh"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "diamond"
-frame = 6
+frame = 1
 playing = true
 
 [node name="GoldFishMed" type="Control" parent="Master/Content"]
@@ -735,9 +741,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/GoldFishMed"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "goldfish"
-frame = 6
+frame = 1
 playing = true
 
 [node name="GoldFishBig" type="Control" parent="Master/Content"]
@@ -788,9 +794,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/GoldFishBig"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "goldfish"
-frame = 4
+frame = 7
 playing = true
 
 [node name="ShadowFish" type="Control" parent="Master/Content"]
@@ -841,9 +847,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/ShadowFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "shadow"
-frame = 2
+frame = 5
 playing = true
 
 [node name="SkeletonFish" type="Control" parent="Master/Content"]
@@ -894,9 +900,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/SkeletonFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "skele"
-frame = 7
+frame = 2
 playing = true
 
 [node name="UniFish" type="Control" parent="Master/Content"]
@@ -947,9 +953,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/UniFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 1.5, 1.5 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "unifish"
-frame = 3
+frame = 6
 playing = true
 
 [node name="UberFish" type="Control" parent="Master/Content"]
@@ -1000,8 +1006,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/UberFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "uberfish"
+frame = 3
 playing = true
 
 [node name="RainbowFish" type="Control" parent="Master/Content"]
@@ -1052,9 +1059,9 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Master/Content/RainbowFish"]
 position = Vector2( 331.721, 164.916 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 70 )
+frames = SubResource( 71 )
 animation = "rainbow"
-frame = 4
+frame = 3
 playing = true
 
 [node name="MysteryFish" type="Control" parent="Master"]
